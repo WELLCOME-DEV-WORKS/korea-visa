@@ -5,7 +5,7 @@ import "../../styles/Reset.css";
 
 const KVLandingSection7 = () => {
   const eventHandler = () => {
-    window.open("https://z17pcyw51c1.typeform.com/to/uTHb6raZ", "_blank");
+    window.open("https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG", "_blank");
   };
   return (
     <section className="kv-container">

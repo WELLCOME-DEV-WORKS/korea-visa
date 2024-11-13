@@ -1,12 +1,12 @@
-'use client';
-import React from 'react';
-import '../../styles/globals.css';
-import '../../styles/Reset.css';
-import '../../styles/KVLanding/KVLandingSection6.css';
+"use client";
+import React from "react";
+import "../../styles/globals.css";
+import "../../styles/Reset.css";
+import "../../styles/KVLanding/KVLandingSection6.css";
 
 const KVLandingSection6 = () => {
   const openLink = () => {
-    window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank');
+    window.open("https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG", "_blank");
   };
 
   return (

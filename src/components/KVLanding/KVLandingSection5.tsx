@@ -1,12 +1,12 @@
-'use client';
-import React from 'react';
-import '../../styles/globals.css';
-import '../../styles/Reset.css';
-import '../../styles/KVLanding/KVLandingSection5.css';
+"use client";
+import React from "react";
+import "../../styles/globals.css";
+import "../../styles/Reset.css";
+import "../../styles/KVLanding/KVLandingSection5.css";
 
 const KVLandingSection5 = () => {
   const openLink = () => {
-    window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank');
+    window.open("https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG", "_blank");
   };
 
   return (
@@ -21,31 +21,31 @@ const KVLandingSection5 = () => {
         <div className="kv-fifth-box">
           <div
             className="kv-fifth-circle"
-            style={{ backgroundColor: '#183262' }}
+            style={{ backgroundColor: "#183262" }}
           >
             개인 비자
           </div>
           <div
             className="kv-fifth-circle"
-            style={{ backgroundColor: '#004098' }}
+            style={{ backgroundColor: "#004098" }}
           >
             가족 이민
           </div>
           <div
             className="kv-fifth-circle"
-            style={{ backgroundColor: '#2357ba' }}
+            style={{ backgroundColor: "#2357ba" }}
           >
             국제 결혼
           </div>
           <div
             className="kv-fifth-circle"
-            style={{ backgroundColor: '#4b80d0' }}
+            style={{ backgroundColor: "#4b80d0" }}
           >
             해외 투자
           </div>
           <div
             className="kv-fifth-circle"
-            style={{ backgroundColor: '#a3c7ff' }}
+            style={{ backgroundColor: "#a3c7ff" }}
           >
             한국 취업
           </div>

@@ -7,7 +7,7 @@ import "../../styles/KVLanding/KVLandingSection8.css";
 
 const KVLandingSection8 = () => {
   const eventHandler = () => {
-    window.open("https://z17pcyw51c1.typeform.com/to/uTHb6raZ", "_blank");
+    window.open("https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG", "_blank");
   };
 
   return (

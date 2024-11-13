@@ -1,0 +1,172 @@
+/********* 
+폰트 
+**********/
+/* @font-face {
+  font-family: 'GangwonEduPower';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPower.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "GangwonEduPower";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YESMyoungjo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font Awesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+/* SUIT 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css");
+
+/********* 
+    공통 레이아웃
+    **********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 1024px) and (min-width: 767px) {
+  body {
+    zoom: 0 !important;
+  }
+}
+
+/********* 
+    공통 컨테이너
+    **********/
+/* 웹 */
+.ki-container {
+  height: auto;
+  margin-top: 250px;
+  /* margin: 150px 0px; */
+  /* background-color: #fff; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* background: black; */
+}
+/* 반응형 */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/********* 
+    메인 색상
+    **********/
+.main-color {
+  color: #004098;
+}
+
+/********* 
+    버튼 디자인 
+    **********/
+/* 웹 */
+.ki-button {
+  width: 16em;
+  /* height: 50px; */
+  background-color: #000000;
+  color: #fff;
+  font-family: "SUIT Variable";
+  font-size: 26px;
+  font-weight: 400;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  text-align: center;
+  /* line-height: 65px; */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  margin-top: 120px;
+}
+.ki-button:hover {
+  background-color: #a3c7ff;
+  color: #fefff5;
+}
+
+.ki-button:active {
+  background-color: #a3c7ff;
+  color: #004098;
+  box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+/* 반응형 */
+@media screen and (max-width: 991px) {
+  .ki-button {
+    font-size: 24px;
+    line-height: 55px;
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ki-button {
+    height: 45px;
+    font-size: 20px;
+    line-height: 55px;
+    margin-top: 55px;
+  }
+}
+
+@media screen and (max-width: 497px) {
+  .ki-button {
+    display: none;
+  }
+  .ki-button-mobile {
+    color: #fff;
+    background: #004098;
+    text-align: center;
+    border-radius: 50px;
+    width: 220px;
+    height: 35px;
+    font-size: 15px;
+    line-height: 38px;
+    margin-top: 50px;
+  }
+}
+
+/* body {
+      width: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background-color: #fff !important;
+    }
+    
+    #s20240819369b1b06ceed7 > main {
+      width: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+    } */

@@ -1,0 +1,27 @@
+.kv-eighth-container {
+  margin-top: 10%;
+}
+
+.kv-title-blue {
+  background: linear-gradient(90deg, #004098 0%, #000000 100%);
+  -webkit-background-clip: text; /* 웹킷 기반 브라우저에서 텍스트에 그라디언트를 적용 */
+  background-clip: text; /* 텍스트에 그라디언트를 적용 */
+  color: transparent; /* 텍스트 색상을 투명하게 설정 */
+  display: inline-block; /* 텍스트가 인라인 블록으로 표시되도록 설정 */
+  text-shadow: 0px 4px 3.5px rgba(0, 0, 0, 0.25); /* 텍스트 그림자 설정 */
+  font-size: 2rem;
+}
+
+.kv-eighth-mobile-box {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .kv-eighth-mobile-box {
+    display: flex;
+  }
+
+  .kv-eighth-desktop-box {
+    display: none;
+  }
+}

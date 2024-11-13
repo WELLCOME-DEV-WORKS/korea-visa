@@ -6,8 +6,8 @@ import '../../styles/KVLanding/KVLandingSection7.css';
 import '../../styles/KV_landing_global.css';
 
 const KVLandingSection7 = () => {
-  const handleButtonClick = () => {
-    window.open('https://z17pcyw51c1.typeform.com/to/uTHb6raZ', '_blank');
+  const eventHandler = () => {
+    window.open("https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG", "_blank");
   };
 
   return (

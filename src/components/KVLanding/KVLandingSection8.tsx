@@ -9,6 +9,7 @@ const KVLandingSection8 = () => {
   const eventHandler = () => {
     window.open("https://z17pcyw51c1.typeform.com/to/uTHb6raZ", "_blank");
   };
+
   return (
     <section className="kv-container">
       <div className="kv-title-blue">WELL-COME을 선택한 이유?</div>
@@ -21,7 +22,11 @@ const KVLandingSection8 = () => {
           alt=""
         />
       </article>
+
       <div className="kv-button" onClick={eventHandler}>
+        한국비자 신청하기
+      </div>
+      <div className="kv-button-mobile" onClick={eventHandler}>
         한국비자 신청하기
       </div>
     </section>

@@ -4,7 +4,7 @@ import "../../styles/globals.css";
 import "../../styles/Reset.css";
 
 const KVLandingSection7 = () => {
-  const eventHandler = () => {
+  const openLink = () => {
     window.open("https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG", "_blank");
   };
   return (
@@ -18,7 +18,7 @@ const KVLandingSection7 = () => {
           alt=""
         />
       </article>
-      <div className="kv-button" onClick={eventHandler}>
+      <div className="kv-button" onClick={openLink}>
         맞춤형 솔루션 받기
       </div>
     </section>

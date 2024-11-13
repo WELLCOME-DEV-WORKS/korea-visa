@@ -1,7 +1,6 @@
 import React from "react";
-import "./Section1.css";
-
-const page = () => {
+import "@/app/KoreaInvestment/Section2.css";
+const Section2 = () => {
   return (
     <>
       {/* 데스크탑 */}
@@ -57,4 +56,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Section2;

@@ -1,0 +1,564 @@
+.kv-third-container {
+  height: auto;
+  margin: 150px 0px;
+  padding: 0 15px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.kv-third-title {
+  width: 100%;
+  height: 36px;
+  font-size: 36px;
+  font-family: 'GangwonEduPower';
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 40px 40px;
+  /* margin-bottom: 40px; */
+  /* 그라데이션 효과 추가 */
+  background: linear-gradient(50deg, #1a1a1a 0%, #2357ba 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.kv-third-processBox {
+  height: auto;
+  width: 100%;
+  max-width: 955px;
+  padding: 15px;
+  display: flex; /* 그리드 대신 플렉스박스 사용 */
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap; /* 줄바꿈을 허용 */
+  gap: 30px 30px; /* 상하 간격 14px, 좌우 간격 10px */
+}
+
+.kv-third-processCard {
+  position: relative;
+  width: 285px;
+  height: 180px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 21px 21px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.kv-third-container-mobile {
+  display: none;
+}
+
+.kv-third-processCard.type1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://cdn.imweb.me/thumbnail/20241105/94c68286210e0.png');
+  background-size: 120%;
+  background-repeat: no-repeat;
+}
+
+.kv-third-processCard.type2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://cdn.imweb.me/thumbnail/20241105/0129b2a9da7c9.png');
+  background-size: 120%;
+  background-repeat: no-repeat;
+}
+.kv-third-processCard.type3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://cdn.imweb.me/thumbnail/20241105/53925d369202d.png');
+  background-size: 120%;
+  background-repeat: no-repeat;
+}
+.kv-third-processCard.type4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://cdn.imweb.me/thumbnail/20241105/6c4a94287ac61.png');
+  background-size: 120%;
+  background-repeat: no-repeat;
+}
+.kv-third-processCard.type5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://cdn.imweb.me/thumbnail/20241105/2740219855999.png');
+  background-size: 120%;
+  background-repeat: no-repeat;
+}
+
+.kv-third-processCard:hover {
+  box-shadow: inset 0 0 0 10em #ffffff20;
+}
+
+.kv-third-processCard:active {
+  box-shadow: inset 0 0 0 10em #ffffff6d;
+}
+
+.kv-third-processCard span {
+  position: relative;
+  font-family: 'SUIT Variable';
+  font-weight: 800;
+  font-size: 32px;
+  text-align: right;
+  color: #fff;
+}
+
+.kv-third-processCard p {
+  position: relative;
+  font-family: 'SUIT Variable';
+  font-size: 22px;
+  text-align: right;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+.kv-third-processBox > .kv-third-processCard:nth-child(1) > div,
+.kv-third-processBox > .kv-third-processCard:nth-child(3) > div {
+  right: 53px;
+}
+.kv-third-processBox > .kv-third-processCard:nth-child(2) > div {
+  right: 34px;
+}
+.kv-third-processBox > .kv-third-processCard:nth-child(4) > div {
+  right: 10px;
+}
+.kv-third-processBox > .kv-third-processCard:nth-child(5) > div {
+  right: 78px;
+}
+
+.kv-third-button-mobile {
+  display: none;
+}
+
+.kv-third-subtext {
+  margin-top: 40px;
+  font-family: 'SUIT Variable';
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+  .kv-third-container-mobile {
+    display: none;
+  }
+
+  .kv-third-container {
+    width: 100%;
+    margin-top: 40px;
+    margin: 150px 0px;
+    padding: 0 15px;
+    margin-top: 10%;
+  }
+
+  .kv-third-title {
+    width: 100%;
+    max-width: 850px;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .kv-third-processBox {
+    width: 100%;
+    max-width: 745px;
+    justify-content: left;
+    align-items: center;
+    gap: 15px 15px;
+  }
+
+  .kv-third-processCard {
+    width: 225px; /* Reduced width for smaller screens */
+    height: 115px; /* Reduced height for smaller screens */
+    padding: 20px 15px; /* Reduced padding for smaller screens */
+  }
+
+  .kv-third-processCard > span {
+    font-size: 24px; /* Reduced font size for smaller screens */
+  }
+
+  .kv-third-processCard > p {
+    font-size: 18px; /* Reduced font size for smaller screens */
+  }
+}
+@media (max-width: 768px) {
+  .kv-third-container {
+    display: none;
+  }
+
+  .kv-third-container-mobile {
+    width: 100%;
+    height: auto;
+    margin: 80px auto; /* Increase margin for larger screens */
+    padding-top: 30px; /* Increase padding */
+    background-color: #ffffff;
+    gap: 20px; /* Increase gap for more spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px; /* Adjusted padding */
+    max-width: 600px; /* Adjusted max-width for larger screens */
+  }
+
+  .kv-third-title-mobile {
+    font-family: 'GangwonEduPower';
+    width: 85%; /* Full width for title */
+    height: auto;
+    padding: 20px;
+    font-size: 28px; /* Increase font size */
+    font-weight: 800;
+    text-align: center;
+    position: relative;
+    margin-left: 0; /* Remove negative margin for better alignment */
+    background: linear-gradient(50deg, #1a1a1a 0%, #2357ba 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .kv-third-processBox-mobile {
+    width: 100%; /* Full width for process box */
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Adjusted gap */
+  }
+
+  .kv-third-processCard-mobile {
+    font-family: 'SUIT Variable';
+    width: 430px;
+    height: 100px; /* Increase height */
+    padding: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+
+  .kv-third-subtext-mobile {
+    margin-top: 15px;
+    font-family: 'SUIT Variable';
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .kv-third-processCard-mobile > span {
+    font-weight: 600;
+    width: 100%;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .kv-third-processCard-mobile > p {
+    font-weight: 600;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    margin: 3px 0 0 0;
+  }
+
+  .kv-third-processCard-mobile.type1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://cdn.imweb.me/thumbnail/20241105/94c68286210e0.png');
+    background-size: 108%;
+    background-repeat: no-repeat;
+    background-position: 35% 63%;
+  }
+
+  .kv-third-processCard-mobile.type2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://cdn.imweb.me/thumbnail/20241105/0129b2a9da7c9.png');
+    background-size: 108%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .kv-third-processCard-mobile.type3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://cdn.imweb.me/thumbnail/20241105/53925d369202d.png');
+    background-size: 108%;
+    background-repeat: no-repeat;
+    background-position: 35% 35%;
+  }
+  .kv-third-processCard-mobile.type4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://cdn.imweb.me/thumbnail/20241105/6c4a94287ac61.png');
+    background-size: 108%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .kv-third-processCard-mobile.type5 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://cdn.imweb.me/thumbnail/20241105/2740219855999.png');
+    background-size: 108%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .kv-third-processCard-mobile:hover {
+    box-shadow: inset 0 0 0 10em #ffffff20;
+  }
+
+  .kv-third-processCard-mobile:active {
+    box-shadow: inset 0 0 0 10em #ffffff6d;
+  }
+
+  .kv-third-subbox-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 430px;
+    height: auto;
+    border-radius: 17px;
+    background: #f7f4f4;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 497px) {
+  .kv-third-container {
+    display: none;
+  }
+
+  .kv-third-container-mobile {
+    width: 100%;
+    height: auto;
+    margin: 70px auto; /* Increase margin for larger screens */
+    padding-top: 30px; /* Increase padding */
+    background-color: #ffffff;
+    gap: 20px; /* Increase gap for more spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px; /* Adjusted padding */
+    max-width: 600px; /* Adjusted max-width for larger screens */
+  }
+
+  .kv-third-title-mobile {
+    font-family: 'GangwonEduPower';
+    width: 85%; /* Full width for title */
+    height: auto;
+    padding: 10px 0;
+    font-size: 26.5px; /* Increase font size */
+    font-weight: 800;
+    text-align: center;
+    position: relative;
+    margin-left: 0; /* Remove negative margin for better alignment */
+    background: linear-gradient(50deg, #1a1a1a 0%, #2357ba 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .kv-third-processBox-mobile {
+    width: 100%; /* Full width for process box */
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Adjusted gap */
+  }
+
+  .kv-third-processCard-mobile {
+    font-family: 'SUIT Variable';
+    width: 90%;
+    height: 80px; /* Increase height */
+    padding: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s ease-in-out;
+    position: relative;
+    justify-content: center;
+  }
+
+  .kv-third-subtext-mobile {
+    margin-top: 15px;
+    font-family: 'SUIT Variable';
+    font-size: 23px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .kv-third-processCard-mobile > span {
+    font-weight: 600;
+    width: 100%;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .kv-third-processCard-mobile > p {
+    font-weight: 600;
+    width: 100%;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    margin: 3px 0 0 0;
+  }
+
+  .kv-third-processCard-mobile.type1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://cdn.imweb.me/thumbnail/20241105/94c68286210e0.png');
+    background-size: 108%;
+    background-repeat: no-repeat;
+    background-position: 35% 63%;
+  }
+
+  .kv-third-processCard-mobile.type2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://cdn.imweb.me/thumbnail/20241105/0129b2a9da7c9.png');
+    background-size: 108%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .kv-third-processCard-mobile.type3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://cdn.imweb.me/thumbnail/20241105/53925d369202d.png');
+    background-size: 108%;
+    background-repeat: no-repeat;
+    background-position: 35% 35%;
+  }
+  .kv-third-processCard-mobile.type4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://cdn.imweb.me/thumbnail/20241105/6c4a94287ac61.png');
+    background-size: 108%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .kv-third-processCard-mobile.type5 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://cdn.imweb.me/thumbnail/20241105/2740219855999.png');
+    background-size: 108%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .kv-third-subbox-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    border-radius: 17px;
+    background: #f7f4f4;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 30px 0;
+  }
+
+  img.kv-third-img {
+    height: 7.5rem;
+  }
+}
+
+.kv-third-button {
+  width: 15em;
+  height: 50px;
+  background-color: #004098;
+  color: #fff;
+  font-family: 'SUIT Variable';
+  font-size: 26px;
+  font-weight: 400;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  text-align: center;
+  line-height: 65px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  margin-top: 40px;
+}
+.kv-third-button:hover {
+  background-color: #a3c7ff;
+  color: #fefff5;
+}
+
+.kv-third-button:active {
+  background-color: #a3c7ff;
+  color: #004098;
+  box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.kv-third-button-mobile:hover {
+  cursor: pointer;
+  background-color: #a3c7ff;
+  color: #fefff5;
+}
+
+.kv-third-button-mobile:active {
+  background-color: #a3c7ff;
+  color: #004098;
+  box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* 반응형 */
+@media screen and (max-width: 991px) {
+  .kv-third-button {
+    font-size: 24px;
+    line-height: 55px;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .kv-third-button {
+    display: none;
+  }
+  .kv-third-button-mobile {
+    display: flex;
+    color: #fff;
+    background: #004098;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-radius: 50px;
+    width: 15em;
+    height: 45px;
+    font-size: 20px;
+    line-height: 38px;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 497px) {
+  .kv-third-button-mobile {
+    color: #fff;
+    background: #004098;
+    text-align: center;
+    border-radius: 50px;
+    width: 220px;
+    height: 35px;
+    font-size: 15px;
+    line-height: 38px;
+    margin: 10px 0;
+  }
+}

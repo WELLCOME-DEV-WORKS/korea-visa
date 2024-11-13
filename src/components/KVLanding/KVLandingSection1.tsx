@@ -4,7 +4,7 @@ import '../../styles/globals.css';
 import '../../styles/Reset.css';
 import '../../styles/KVLanding/KVLandingSection1.css';
 
-function KVLandingSection1() {
+const KVLandingSection1 = () => {
   const openForm = () => {
     window.open('https://z17pcyw51c1.typeform.com/to/hWFwHwCH', '_blank');
   };
@@ -38,6 +38,6 @@ function KVLandingSection1() {
       </div>
     </>
   );
-}
+};
 
 export default KVLandingSection1;

@@ -6,7 +6,7 @@ import "../../styles/KV_landing_global.css";
 import "../../styles/KVLanding/KVLandingSection8.css";
 
 const KVLandingSection8 = () => {
-  const eventHandler = () => {
+  const openLink = () => {
     window.open("https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG", "_blank");
   };
 
@@ -23,10 +23,10 @@ const KVLandingSection8 = () => {
         />
       </article>
 
-      <div className="kv-button" onClick={eventHandler}>
+      <div className="kv-button" onClick={openLink}>
         한국비자 신청하기
       </div>
-      <div className="kv-button-mobile" onClick={eventHandler}>
+      <div className="kv-button-mobile" onClick={openLink}>
         한국비자 신청하기
       </div>
     </section>

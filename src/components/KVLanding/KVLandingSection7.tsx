@@ -1,13 +1,13 @@
-"use client";
-import React from "react";
-import "../../styles/globals.css";
-import "../../styles/Reset.css";
-import "../../styles/KVLanding/KVLandingSection7.css";
-import "../../styles/KV_landing_global.css";
+'use client';
+import React from 'react';
+import '../../styles/globals.css';
+import '../../styles/Reset.css';
+import '../../styles/KVLanding/KVLandingSection7.css';
+import '../../styles/KV_landing_global.css';
 
 const KVLandingSection7 = () => {
   const openLink = () => {
-    window.open("https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG", "_blank");
+    window.open('https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG', '_blank');
   };
 
   return (
@@ -18,9 +18,9 @@ const KVLandingSection7 = () => {
           src="https://cdn.imweb.me/thumbnail/20241106/2bef43d560e10.png"
           alt="맞춤형 솔루션 모바일 이미지"
         />
-        {/* <div className="kv-button-mobile" onClick={openLink}>
+        <div className="kv-button-mobile" onClick={openLink}>
           맞춤형 솔루션 받기
-        </div> */}
+        </div>
       </article>
       <article className="kv-seventh-desktop-box">
         <img

@@ -17,7 +17,7 @@
 /* Title styles */
 .kv-fourth-title {
   line-height: 40px;
-  font-family: 'SUIT Variable';
+  font-family: "SUIT Variable";
   font-size: 25px;
   font-weight: 600;
   color: black;
@@ -31,7 +31,7 @@
 .kv-fourth-subtitle {
   color: #004098;
   font-size: 45px;
-  font-family: 'YESMyoungjo';
+  font-family: "EliceDigitalBaeum-Bd";
   margin-top: 15px;
 }
 
@@ -68,7 +68,7 @@
   /* Title styles */
   .kv-fourth-title-mobile {
     line-height: 40px;
-    font-family: 'SUIT Variable';
+    font-family: "SUIT Variable";
     font-size: 24px;
     font-weight: 600;
     color: black;
@@ -83,7 +83,7 @@
   .kv-fourth-subtitle-mobile {
     color: #004098;
     font-size: 32px;
-    font-family: 'YESMyoungjo';
+    font-family: "EliceDigitalBaeum-Bd";
     margin-top: 15px;
   }
 
@@ -175,7 +175,7 @@
 
   .kv-fourth-title-mobile {
     line-height: 25px;
-    font-family: 'SUIT Variable';
+    font-family: "SUIT Variable";
     font-size: 14px;
     font-weight: bold;
     color: black;
@@ -214,7 +214,7 @@
   height: 50px;
   background-color: #004098;
   color: #fff;
-  font-family: 'SUIT Variable';
+  font-family: "SUIT Variable";
   font-size: 26px;
   font-weight: 400;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

@@ -4,21 +4,15 @@ import React from "react";
 const Header = () => {
   return (
     <header
-      className="flex gap-5 justify-between w-full bg-[#004098] text-white text-center whitespace-nowrap  max-md:max-w-full px-20
-    max-md:flex-col max-md:text-center max-md:pb-3
+      className="flex gap-5 justify-between w-full bg-[#004098] text-white text-center whitespace-nowrap px-20
+     max-md:flex-col max-md:text-center max-md:pb-3
     "
     >
       {/* 로고 폰트 적용 링크 */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet"
-      />
       <Link href="/">
         <div
           className="flex gap-2 p-2.5 items-center justify-center
-        max-md:"
+        "
         >
           <img
             loading="lazy"

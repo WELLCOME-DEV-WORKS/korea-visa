@@ -14,7 +14,7 @@
   width: 100%;
   height: auto;
   font-size: 36px;
-  font-family: 'GangwonEduPower';
+  font-family: "GangwonEduPower";
   font-weight: 800;
   text-align: center;
   margin: 0 0 40px 40px;
@@ -57,32 +57,32 @@
 
 .kv-third-processCard.type1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://cdn.imweb.me/thumbnail/20241105/94c68286210e0.png');
+    url("https://cdn.imweb.me/thumbnail/20241105/94c68286210e0.png");
   background-size: 120%;
   background-repeat: no-repeat;
 }
 
 .kv-third-processCard.type2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://cdn.imweb.me/thumbnail/20241105/0129b2a9da7c9.png');
+    url("https://cdn.imweb.me/thumbnail/20241105/0129b2a9da7c9.png");
   background-size: 120%;
   background-repeat: no-repeat;
 }
 .kv-third-processCard.type3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://cdn.imweb.me/thumbnail/20241105/53925d369202d.png');
+    url("https://cdn.imweb.me/thumbnail/20241105/53925d369202d.png");
   background-size: 120%;
   background-repeat: no-repeat;
 }
 .kv-third-processCard.type4 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://cdn.imweb.me/thumbnail/20241105/6c4a94287ac61.png');
+    url("https://cdn.imweb.me/thumbnail/20241105/6c4a94287ac61.png");
   background-size: 120%;
   background-repeat: no-repeat;
 }
 .kv-third-processCard.type5 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://cdn.imweb.me/thumbnail/20241105/2740219855999.png');
+    url("https://cdn.imweb.me/thumbnail/20241105/2740219855999.png");
   background-size: 120%;
   background-repeat: no-repeat;
 }
@@ -97,7 +97,7 @@
 
 .kv-third-processCard span {
   position: relative;
-  font-family: 'SUIT Variable';
+  font-family: "SUIT Variable";
   font-weight: 800;
   font-size: 32px;
   text-align: right;
@@ -106,7 +106,7 @@
 
 .kv-third-processCard p {
   position: relative;
-  font-family: 'SUIT Variable';
+  font-family: "SUIT Variable";
   font-size: 22px;
   text-align: right;
   font-weight: 600;
@@ -134,7 +134,7 @@
 
 .kv-third-subtext {
   margin-top: 40px;
-  font-family: 'SUIT Variable';
+  font-family: "SUIT Variable";
   font-size: 24px;
   font-weight: 700;
   text-align: center;
@@ -203,7 +203,7 @@
   }
 
   .kv-third-title-mobile {
-    font-family: 'GangwonEduPower';
+    font-family: "GangwonEduPower";
     width: 85%; /* Full width for title */
     height: auto;
     padding: 20px;
@@ -230,7 +230,7 @@
   }
 
   .kv-third-processCard-mobile {
-    font-family: 'SUIT Variable';
+    font-family: "SUIT Variable";
     width: 430px;
     height: 100px; /* Increase height */
     padding: 20px;
@@ -247,7 +247,7 @@
 
   .kv-third-subtext-mobile {
     margin-top: 15px;
-    font-family: 'SUIT Variable';
+    font-family: "SUIT Variable";
     font-size: 25px;
     font-weight: 700;
     text-align: center;
@@ -275,7 +275,7 @@
 
   .kv-third-processCard-mobile.type1 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('https://cdn.imweb.me/thumbnail/20241105/94c68286210e0.png');
+      url("https://cdn.imweb.me/thumbnail/20241105/94c68286210e0.png");
     background-size: 108%;
     background-repeat: no-repeat;
     background-position: 35% 63%;
@@ -283,28 +283,28 @@
 
   .kv-third-processCard-mobile.type2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('https://cdn.imweb.me/thumbnail/20241105/0129b2a9da7c9.png');
+      url("https://cdn.imweb.me/thumbnail/20241105/0129b2a9da7c9.png");
     background-size: 108%;
     background-repeat: no-repeat;
     background-position: center;
   }
   .kv-third-processCard-mobile.type3 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('https://cdn.imweb.me/thumbnail/20241105/53925d369202d.png');
+      url("https://cdn.imweb.me/thumbnail/20241105/53925d369202d.png");
     background-size: 108%;
     background-repeat: no-repeat;
     background-position: 35% 35%;
   }
   .kv-third-processCard-mobile.type4 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('https://cdn.imweb.me/thumbnail/20241105/6c4a94287ac61.png');
+      url("https://cdn.imweb.me/thumbnail/20241105/6c4a94287ac61.png");
     background-size: 108%;
     background-repeat: no-repeat;
     background-position: center;
   }
   .kv-third-processCard-mobile.type5 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('https://cdn.imweb.me/thumbnail/20241105/2740219855999.png');
+      url("https://cdn.imweb.me/thumbnail/20241105/2740219855999.png");
     background-size: 108%;
     background-repeat: no-repeat;
     background-position: center;
@@ -353,7 +353,7 @@
   }
 
   .kv-third-title-mobile {
-    font-family: 'GangwonEduPower';
+    font-family: "GangwonEduPower";
     width: 85%; /* Full width for title */
     height: auto;
     padding: 10px 0;
@@ -380,7 +380,7 @@
   }
 
   .kv-third-processCard-mobile {
-    font-family: 'SUIT Variable';
+    font-family: "SUIT Variable";
     width: 90%;
     height: 80px; /* Increase height */
     padding: 20px;
@@ -396,7 +396,7 @@
 
   .kv-third-subtext-mobile {
     margin-top: 15px;
-    font-family: 'SUIT Variable';
+    font-family: "SUIT Variable";
     font-size: 23px;
     font-weight: 700;
     text-align: center;
@@ -424,7 +424,7 @@
 
   .kv-third-processCard-mobile.type1 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('https://cdn.imweb.me/thumbnail/20241105/94c68286210e0.png');
+      url("https://cdn.imweb.me/thumbnail/20241105/94c68286210e0.png");
     background-size: 108%;
     background-repeat: no-repeat;
     background-position: 35% 63%;
@@ -432,28 +432,28 @@
 
   .kv-third-processCard-mobile.type2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('https://cdn.imweb.me/thumbnail/20241105/0129b2a9da7c9.png');
+      url("https://cdn.imweb.me/thumbnail/20241105/0129b2a9da7c9.png");
     background-size: 108%;
     background-repeat: no-repeat;
     background-position: center;
   }
   .kv-third-processCard-mobile.type3 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('https://cdn.imweb.me/thumbnail/20241105/53925d369202d.png');
+      url("https://cdn.imweb.me/thumbnail/20241105/53925d369202d.png");
     background-size: 108%;
     background-repeat: no-repeat;
     background-position: 35% 35%;
   }
   .kv-third-processCard-mobile.type4 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('https://cdn.imweb.me/thumbnail/20241105/6c4a94287ac61.png');
+      url("https://cdn.imweb.me/thumbnail/20241105/6c4a94287ac61.png");
     background-size: 108%;
     background-repeat: no-repeat;
     background-position: center;
   }
   .kv-third-processCard-mobile.type5 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('https://cdn.imweb.me/thumbnail/20241105/2740219855999.png');
+      url("https://cdn.imweb.me/thumbnail/20241105/2740219855999.png");
     background-size: 108%;
     background-repeat: no-repeat;
     background-position: center;
@@ -482,8 +482,8 @@
   height: 50px;
   background-color: #004098;
   color: #fff;
-  font-family: 'SUIT Variable';
-  font-size: 26px;
+  font-family: "SUIT Variable";
+  font-size: 20px;
   font-weight: 400;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
@@ -522,7 +522,6 @@
 /* 반응형 */
 @media screen and (max-width: 991px) {
   .kv-third-button {
-    font-size: 24px;
     line-height: 55px;
     margin-top: 40px;
   }

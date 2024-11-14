@@ -24,6 +24,18 @@ const GoogleAnalytics = () => {
         })(window,document,'script','dataLayer',"${GTM_ID}");
 
         `}</Script>
+
+      {/* Google tag (gtag.js) */}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-CKVTRV8111"
+      ></Script>
+      <Script id="gtag">
+        {`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CKVTRV8111');`}
+      </Script>
     </>
   );
 };

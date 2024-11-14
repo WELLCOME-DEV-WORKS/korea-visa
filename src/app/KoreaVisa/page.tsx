@@ -1,11 +1,11 @@
-import KVLandingSection1 from '@/components/KVLanding/KVLandingSection1';
-import KVLandingSection2 from '@/components/KVLanding/KVLandingSection2';
-import KVLandingSection3 from '@/components/KVLanding/KVLandingSection3';
-import KVLandingSection4 from '@/components/KVLanding/KVLandingSection4';
-import KVLandingSection5 from '@/components/KVLanding/KVLandingSection5';
-import KVLandingSection6 from '@/components/KVLanding/KVLandingSection6';
-import KVLandingSection7 from '@/components/KVLanding/KVLandingSection7';
-import KVLandingSection8 from '@/components/KVLanding/KVLandingSection8';
+import KVLandingSection1 from "@/app/KoreaVisa/components/KVLandingSection1";
+import KVLandingSection2 from "@/app/KoreaVisa/components/KVLandingSection2";
+import KVLandingSection3 from "@/app/KoreaVisa/components/KVLandingSection3";
+import KVLandingSection4 from "@/app/KoreaVisa/components/KVLandingSection4";
+import KVLandingSection5 from "@/app/KoreaVisa/components/KVLandingSection5";
+import KVLandingSection6 from "@/app/KoreaVisa/components/KVLandingSection6";
+import KVLandingSection7 from "@/app/KoreaVisa/components/KVLandingSection7";
+import KVLandingSection8 from "@/app/KoreaVisa/components/KVLandingSection8";
 
 const LandingPage = () => {
   return (

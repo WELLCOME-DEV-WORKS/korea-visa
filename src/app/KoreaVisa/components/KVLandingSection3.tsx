@@ -1,12 +1,12 @@
-'use client';
-import React from 'react';
-import '../../styles/globals.css';
-import '../../styles/Reset.css';
-import '../../styles/KVLanding/KVLandingSection3.css';
+"use client";
+import React from "react";
+import "../../styles/globals.css";
+import "../../styles/Reset.css";
+import "@/styles/KoreaVisa/KVLandingSection3.css";
 
 const KVLandingSection3 = () => {
   const openLink = (url: string) => {
-    window.open(url, '_blank');
+    window.open(url, "_blank");
   };
 
   return (
@@ -17,7 +17,7 @@ const KVLandingSection3 = () => {
           <div
             className="kv-third-processCard type1"
             onClick={() =>
-              openLink('https://z17pcyw51c1.typeform.com/to/xFWIie3s')
+              openLink("https://z17pcyw51c1.typeform.com/to/xFWIie3s")
             }
           >
             <span>기업 투자 비자</span>
@@ -27,7 +27,7 @@ const KVLandingSection3 = () => {
           <div
             className="kv-third-processCard type2"
             onClick={() =>
-              openLink('https://z17pcyw51c1.typeform.com/to/LwJlV3Ba')
+              openLink("https://z17pcyw51c1.typeform.com/to/LwJlV3Ba")
             }
           >
             <span>취업 비자</span>
@@ -37,7 +37,7 @@ const KVLandingSection3 = () => {
           <div
             className="kv-third-processCard type3"
             onClick={() =>
-              openLink('https://z17pcyw51c1.typeform.com/to/fjjFvMYo')
+              openLink("https://z17pcyw51c1.typeform.com/to/fjjFvMYo")
             }
           >
             <span>결혼이민</span>
@@ -51,7 +51,7 @@ const KVLandingSection3 = () => {
           <div
             className="kv-third-processCard type4"
             onClick={() =>
-              openLink('https://z17pcyw51c1.typeform.com/to/hWFwHwCH')
+              openLink("https://z17pcyw51c1.typeform.com/to/hWFwHwCH")
             }
           >
             <span>재외동포</span>
@@ -61,7 +61,7 @@ const KVLandingSection3 = () => {
           <div
             className="kv-third-processCard type5"
             onClick={() =>
-              openLink('https://z17pcyw51c1.typeform.com/to/bD32oeNv')
+              openLink("https://z17pcyw51c1.typeform.com/to/bD32oeNv")
             }
           >
             <span>영주</span>
@@ -74,7 +74,7 @@ const KVLandingSection3 = () => {
         <div
           className="kv-third-button"
           onClick={() =>
-            openLink('https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG')
+            openLink("https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG")
           }
         >
           취득할 수 있는 비자 확인하기
@@ -89,7 +89,7 @@ const KVLandingSection3 = () => {
           <div
             className="kv-third-processCard-mobile type1"
             onClick={() =>
-              openLink('https://z17pcyw51c1.typeform.com/to/vjlgHKDj')
+              openLink("https://z17pcyw51c1.typeform.com/to/vjlgHKDj")
             }
           >
             <span>기업 투자 비자</span>
@@ -99,7 +99,7 @@ const KVLandingSection3 = () => {
           <div
             className="kv-third-processCard-mobile type2"
             onClick={() =>
-              openLink('https://z17pcyw51c1.typeform.com/to/hWFwHwCH')
+              openLink("https://z17pcyw51c1.typeform.com/to/hWFwHwCH")
             }
           >
             <span>취업 비자</span>
@@ -109,7 +109,7 @@ const KVLandingSection3 = () => {
           <div
             className="kv-third-processCard-mobile type3"
             onClick={() =>
-              openLink('https://z17pcyw51c1.typeform.com/to/BQCoDKCr')
+              openLink("https://z17pcyw51c1.typeform.com/to/BQCoDKCr")
             }
           >
             <span>결혼이민</span>
@@ -119,7 +119,7 @@ const KVLandingSection3 = () => {
           <div
             className="kv-third-processCard-mobile type4"
             onClick={() =>
-              openLink('https://z17pcyw51c1.typeform.com/to/hWFwHwCH')
+              openLink("https://z17pcyw51c1.typeform.com/to/hWFwHwCH")
             }
           >
             <span>재외동포</span>
@@ -129,7 +129,7 @@ const KVLandingSection3 = () => {
           <div
             className="kv-third-processCard-mobile type5"
             onClick={() =>
-              openLink('https://z17pcyw51c1.typeform.com/to/hWFwHwCH')
+              openLink("https://z17pcyw51c1.typeform.com/to/hWFwHwCH")
             }
           >
             <span>영주</span>
@@ -150,7 +150,7 @@ const KVLandingSection3 = () => {
           <div
             className="kv-third-button-mobile"
             onClick={() =>
-              openLink('https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG')
+              openLink("https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG")
             }
           >
             취득할 수 있는 비자 확인하기

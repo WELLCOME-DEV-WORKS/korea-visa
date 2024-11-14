@@ -2,7 +2,7 @@
 import React from "react";
 import "../../styles/globals.css";
 import "../../styles/Reset.css";
-import "../../styles/KVLanding/KVLandingSection4.css";
+import "@/styles/KoreaVisa/KVLandingSection4.css";
 
 const KVLandingSection4 = () => {
   const openLink = () => {

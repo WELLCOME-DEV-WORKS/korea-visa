@@ -149,6 +149,11 @@
     width: 90%;
     height: auto;
   }
+
+  .kv-sixth-processCard-mobile span {
+    font-size: 11px;
+    padding: 0 2px;
+  }
 }
 
 /*********

@@ -19,6 +19,7 @@
 .kv-slogan {
   color: black;
   font-family: "GangwonEduPower";
+  padding-top: 6px; /* 강원에듀파워 글자 하단 여백 줄이기용*/
   font-size: 68px;
   width: 790px;
   text-transform: uppercase;
@@ -80,6 +81,7 @@
     line-height: 59px;
     color: black;
     font-family: "GangwonEduPower";
+    padding-top: 6px; /* 강원에듀파워 글자 하단 여백 줄이기용*/
     font-size: 40px; /* Adjusted font size for readability */
     width: 90%; /* Make width responsive */
     text-transform: uppercase;
@@ -137,6 +139,7 @@
     font-size: 24px;
     color: #000;
     font-family: "GangwonEduPower";
+    padding-top: 6px; /* 강원에듀파워 글자 하단 여백 줄이기용*/
     position: relative;
   }
 
@@ -171,7 +174,7 @@
   background-color: #004098;
   color: #fff;
   font-family: "SUIT Variable";
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 400;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
@@ -197,7 +200,6 @@
 /* 반응형 */
 @media screen and (max-width: 991px) {
   .kv-first-button {
-    font-size: 24px;
     line-height: 55px;
     margin-top: 80px;
   }
@@ -206,7 +208,6 @@
 @media screen and (max-width: 767px) {
   .kv-first-button {
     height: 45px;
-    font-size: 20px;
     line-height: 55px;
     margin-top: 55px;
   }
@@ -221,7 +222,7 @@
     background: #004098;
     text-align: center;
     border-radius: 50px;
-    width: 220px;
+    width: 11em;
     height: 35px;
     font-size: 15px;
     line-height: 38px;

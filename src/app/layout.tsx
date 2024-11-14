@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Header from "./ui/Header";
 import GoogleAnalytics from "@/utils/GoogleAnalytics";
+
+
 // import "../styles/globals.css";
 
 // const geistSans = localFont({

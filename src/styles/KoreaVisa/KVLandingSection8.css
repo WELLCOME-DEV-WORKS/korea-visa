@@ -7,6 +7,7 @@
   text-shadow: 0px 4px 3.5px rgba(0, 0, 0, 0.25); /* 텍스트 그림자 설정 */
   font-size: 2.2rem;
   font-family: "GangwonEduPower";
+  padding-top: 6px; /* 강원에듀파워 글자 하단 여백 줄이기용*/
   margin-bottom: 120px;
 }
 

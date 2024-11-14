@@ -197,7 +197,6 @@
 /* 반응형 */
 @media screen and (max-width: 991px) {
   .kv-first-button {
-    font-size: 20px;
     line-height: 55px;
     margin-top: 80px;
   }
@@ -206,7 +205,6 @@
 @media screen and (max-width: 767px) {
   .kv-first-button {
     height: 45px;
-    font-size: 20px;
     line-height: 55px;
     margin-top: 55px;
   }

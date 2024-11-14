@@ -1,12 +1,12 @@
-'use client';
-import React from 'react';
-import '../../styles/globals.css';
-import '../../styles/Reset.css';
-import '../../styles/KVLanding/KVLandingSection2.css';
+"use client";
+import React from "react";
+import "@/styles/globals.css";
+import "@/styles/Reset.css";
+import "@/styles/KoreaVisa/KVLandingSection2.css";
 
 const KVLandingSection2 = () => {
   const handleButtonClick = () => {
-    window.open('https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG', '_blank');
+    window.open("https://z17pcyw51c1.typeform.com/to/Pe8ZJkpG", "_blank");
   };
 
   return (

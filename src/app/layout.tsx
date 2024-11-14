@@ -1,5 +1,6 @@
-import type { Metadata } from 'next';
-import '../styles/globals.css';
+import type { Metadata } from "next";
+import Header from "./ui/Header";
+// import "../styles/globals.css";
 
 // const geistSans = localFont({
 //   src: 'public/fonts/GeistVF',
@@ -13,9 +14,9 @@ import '../styles/globals.css';
 // });
 
 export const metadata: Metadata = {
-  title: '한국 비자, 투자 비자',
+  title: "한국 비자, 투자 비자",
   description:
-    '한국은 세계에서 투자 금액이 가장 적어도 투자 비자를 받을 수 있는 국가입니다.',
+    "한국은 세계에서 투자 금액이 가장 적어도 투자 비자를 받을 수 있는 국가입니다.",
 };
 
 export default function RootLayout({
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>

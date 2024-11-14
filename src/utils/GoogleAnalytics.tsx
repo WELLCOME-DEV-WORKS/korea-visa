@@ -5,7 +5,7 @@ const GoogleAnalytics = () => {
   const GTM_ID = process.env.NEXT_PUBLIC_GA_ID;
 
   return (
-    <div>
+    <>
       {/* <!-- Google Tag Manager (noscript) --> */}
       <noscript>
         <iframe
@@ -24,7 +24,7 @@ const GoogleAnalytics = () => {
         })(window,document,'script','dataLayer',"${GTM_ID}");
 
         `}</Script>
-    </div>
+    </>
   );
 };
 

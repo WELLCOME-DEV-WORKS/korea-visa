@@ -10,26 +10,26 @@
 } */
 
 @font-face {
-  font-family: 'GangwonEduPower';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff')
-    format('woff');
+  font-family: "GangwonEduPower";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'YESMyoungjo';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff')
-    format('woff');
+  font-family: "YESMyoungjo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 /* Font Awesome */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 
 /* SUIT 폰트 */
-@import url('https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css');
+@import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css");
 
 /********* 
   공통 레이아웃
@@ -69,7 +69,6 @@ body {
   text-align: center;
 }
 /* 반응형 */
-
 .flex-center {
   display: flex;
   justify-content: center;
@@ -92,7 +91,7 @@ body {
   height: 50px;
   background-color: #004098;
   color: #fff;
-  font-family: 'SUIT Variable';
+  font-family: "SUIT Variable";
   font-size: 26px;
   font-weight: 400;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

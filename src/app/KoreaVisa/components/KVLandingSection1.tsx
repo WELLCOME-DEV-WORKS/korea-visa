@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import "../../styles/globals.css";
-import "../../styles/Reset.css";
-import "../../styles/KVLanding/KVLandingSection1.css";
+import "@/styles/globals.css";
+import "@/styles/Reset.css";
+import "@/styles/KoreaVisa/KVLandingSection1.css";
 
 const KVLandingSection1 = () => {
   const openForm = () => {
@@ -11,7 +11,7 @@ const KVLandingSection1 = () => {
 
   return (
     <>
-      <div className="kv-first-container">
+      <div className="kv-first-container bg-black">
         <div className="kv-slogan">
           한국에서 활동을 시작하는
           <br />

@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import "../../styles/globals.css";
-import "../../styles/Reset.css";
-import "../../styles/KVLanding/KVLandingSection3.css";
+import "@/styles/globals.css";
+import "@/styles/Reset.css";
+import "@/styles/KoreaVisa/KVLandingSection3.css";
 
 const KVLandingSection3 = () => {
   const openLink = (url: string) => {

@@ -15,6 +15,7 @@
   height: auto;
   font-size: 36px;
   font-family: "GangwonEduPower";
+  padding-top: 6px; /* 강원에듀파워 글자 하단 여백 줄이기용*/
   font-weight: 800;
   text-align: center;
   margin: 0 0 40px 40px;
@@ -204,6 +205,7 @@
 
   .kv-third-title-mobile {
     font-family: "GangwonEduPower";
+    padding-top: 6px; /* 강원에듀파워 글자 하단 여백 줄이기용*/
     width: 85%; /* Full width for title */
     height: auto;
     padding: 20px;
@@ -354,6 +356,7 @@
 
   .kv-third-title-mobile {
     font-family: "GangwonEduPower";
+    padding-top: 6px; /* 강원에듀파워 글자 하단 여백 줄이기용*/
     width: 85%; /* Full width for title */
     height: auto;
     padding: 10px 0;

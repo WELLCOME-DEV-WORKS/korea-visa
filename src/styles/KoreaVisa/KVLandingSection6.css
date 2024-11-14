@@ -56,6 +56,7 @@
 }
 .kv-sixth-processCard {
   font-family: "GangwonEduPower";
+  padding-top: 6px; /* 강원에듀파워 글자 하단 여백 줄이기용*/
   width: 100% !important;
   height: 230px !important;
   transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
@@ -177,6 +178,7 @@
 
   .kv-sixth-processCard-mobile {
     font-family: "GangwonEduPower";
+    padding-top: 6px; /* 강원에듀파워 글자 하단 여백 줄이기용*/
     width: 6em !important;
     height: 9em !important;
     transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
@@ -249,6 +251,7 @@
 
   .kv-sixth-processCard-mobile {
     font-family: "GangwonEduPower";
+    padding-top: 6px; /* 강원에듀파워 글자 하단 여백 줄이기용*/
     width: 4.5em !important;
     height: 15em !important;
     transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
@@ -287,6 +290,7 @@
 
   .kv-sixth-processCard-mobile {
     font-family: "GangwonEduPower";
+    padding-top: 6px; /* 강원에듀파워 글자 하단 여백 줄이기용*/
     width: 3.9em !important;
     height: 13em !important;
     transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;

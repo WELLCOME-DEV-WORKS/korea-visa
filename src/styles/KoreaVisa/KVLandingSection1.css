@@ -19,6 +19,7 @@
 .kv-slogan {
   color: black;
   font-family: "GangwonEduPower";
+  padding-top: 6px; /* 강원에듀파워 글자 하단 여백 줄이기용*/
   font-size: 68px;
   width: 790px;
   text-transform: uppercase;
@@ -80,6 +81,7 @@
     line-height: 59px;
     color: black;
     font-family: "GangwonEduPower";
+    padding-top: 6px; /* 강원에듀파워 글자 하단 여백 줄이기용*/
     font-size: 40px; /* Adjusted font size for readability */
     width: 90%; /* Make width responsive */
     text-transform: uppercase;
@@ -137,6 +139,7 @@
     font-size: 24px;
     color: #000;
     font-family: "GangwonEduPower";
+    padding-top: 6px; /* 강원에듀파워 글자 하단 여백 줄이기용*/
     position: relative;
   }
 

@@ -171,7 +171,7 @@
   background-color: #004098;
   color: #fff;
   font-family: "SUIT Variable";
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 400;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
@@ -197,7 +197,7 @@
 /* 반응형 */
 @media screen and (max-width: 991px) {
   .kv-first-button {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 55px;
     margin-top: 80px;
   }
@@ -221,7 +221,7 @@
     background: #004098;
     text-align: center;
     border-radius: 50px;
-    width: 220px;
+    width: 11em;
     height: 35px;
     font-size: 15px;
     line-height: 38px;

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import "../../styles/globals.css";
-import "../../styles/Reset.css";
+import "@/styles/globals.css";
+import "@/styles/Reset.css";
 import "@/styles/KoreaVisa/KVLandingSection6.css";
 
 const KVLandingSection6 = () => {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Header from "./ui/Header";
+import Header2 from "./ui/Header2";
 // import "../styles/globals.css";
 
 // const geistSans = localFont({
@@ -30,6 +31,7 @@ export default function RootLayout({
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
+        {/* <Header2 /> */}
         {children}
       </body>
     </html>

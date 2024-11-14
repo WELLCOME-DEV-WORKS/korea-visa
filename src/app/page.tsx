@@ -1,5 +1,9 @@
-import { redirect } from "next/navigation";
+import LandingPage from "./KoreaVisa/page";
 
 export default function Home() {
-  redirect("/KoreaVisa");
+  return (
+    <>
+      <LandingPage />
+    </>
+  );
 }

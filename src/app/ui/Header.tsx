@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-[#004098] text-white text-center">
+    <header className="sticky top-0 left-0 mb-8 z-50 w-full bg-[#004098] text-white text-center">
       <nav
         className="flex gap-5 justify-between whitespace-nowrap my-1 mx-[13vw] content-center items-center
      max-lg:flex-col max-lg:text-center max-lg:pb-0  max-lg:my-0 max-lg:h-[15vh]"
@@ -26,7 +26,7 @@ const Header = () => {
         >
           <a
             className="my-auto basis-auto font-museo  hover:font-extrabold"
-            href="https://z17pcyw51c1.typeform.com/to/xFWIie3s"
+            href="http://localhost:3000/Investment"
           >
             투자
           </a>

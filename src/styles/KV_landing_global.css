@@ -25,6 +25,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "EliceDigitalBaeum-Bd";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Font Awesome */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 
@@ -92,7 +100,7 @@ body {
   background-color: #004098;
   color: #fff;
   font-family: "SUIT Variable";
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 400;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
@@ -118,7 +126,6 @@ body {
 /* 반응형 */
 @media screen and (max-width: 991px) {
   .kv-button {
-    font-size: 24px;
     line-height: 55px;
     margin-top: 80px;
   }
@@ -127,7 +134,6 @@ body {
 @media screen and (max-width: 767px) {
   .kv-button {
     height: 45px;
-    font-size: 20px;
     line-height: 55px;
     margin-top: 55px;
   }

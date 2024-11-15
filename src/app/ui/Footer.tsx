@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bottom-0 flex gap-5 justify-between w-full bg-wellcome-pink max-md:max-w-full p-5 text-white text-base sm:text-xs md:text-xs lg:text-xs">
+    <footer className="bottom-0 flex gap-5 justify-between w-full bg-[#004098]  max-md:max-w-full p-5 text-white text-base sm:text-xs md:text-xs lg:text-xs">
       <span>
         Company Name : Well-come Visa Co., Ltd. <br />
         Representative : Inhyuk Lee <br />

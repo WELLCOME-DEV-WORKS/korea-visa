@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Header from "./ui/Header";
 import GoogleAnalytics from "@/utils/GoogleAnalytics";
-
+import Footer from "./ui/Footer";
 
 // import "../styles/globals.css";
 
@@ -35,6 +35,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

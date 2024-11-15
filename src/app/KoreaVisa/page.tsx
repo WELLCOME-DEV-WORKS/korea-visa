@@ -6,9 +6,9 @@ import KVLandingSection5 from "@/app/koreavisa/components/KVLandingSection5";
 import KVLandingSection6 from "@/app/koreavisa/components/KVLandingSection6";
 import KVLandingSection7 from "@/app/koreavisa/components/KVLandingSection7";
 import KVLandingSection8 from "@/app/koreavisa/components/KVLandingSection8";
-import Section3 from "../investment/components/Section3";
-import Section1 from "../investment/components/Section1";
-import Section2 from "../investment/components/Section2";
+// import Section3 from "../investment/components/Section3";
+// import Section1 from "../investment/components/Section1";
+// import Section2 from "../investment/components/Section2";
 
 const LandingPage = () => {
   return (

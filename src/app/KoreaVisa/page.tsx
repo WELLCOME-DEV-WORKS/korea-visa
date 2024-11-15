@@ -21,9 +21,9 @@ const LandingPage = () => {
       <KVLandingSection6 />
       <KVLandingSection7 />
       <KVLandingSection8 />
-      <Section1 />
+      {/* <Section1 />
       <Section2 />
-      <Section3 />
+      <Section3 /> */}
     </>
   );
 };

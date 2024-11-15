@@ -17,10 +17,7 @@ const Section2 = () => {
             받을 수 있는 국가 입니다.&quot;
           </div>
           <article className="ki-section2-img">
-            <img
-              src="https://cdn.imweb.me/thumbnail/20241112/173376a1084b4.png"
-              alt=""
-            />
+            <img loading="lazy" src="img/ki-section2-img.png" alt="" />
           </article>
           <div className="ki-section2-btn" role="button">
             바로 한국비자 받기
@@ -45,7 +42,8 @@ const Section2 = () => {
         </div>
         <img
           className="ki-section2-img-mobile"
-          src="https://cdn.imweb.me/thumbnail/20241113/1b5a22c3c5d0f.png"
+          loading="lazy"
+          src="img/ki-section2-img.png"
           alt=""
         />
         <div className="ki-section2-btn-mobile" role="button">

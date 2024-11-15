@@ -20,7 +20,10 @@ const Header = () => {
             />
           </div>
         </Link>
-        <div className="flex gap-7 items-center justify-center text-base/6 mr-[12vw]">
+        <div
+          className="flex gap-7 items-center justify-center text-base/6 mr-[12vw]
+        max-lg:mr-0"
+        >
           <a
             className="my-auto basis-auto font-museo  hover:font-extrabold"
             href="https://z17pcyw51c1.typeform.com/to/xFWIie3s"

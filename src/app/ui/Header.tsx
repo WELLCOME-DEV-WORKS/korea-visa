@@ -3,9 +3,9 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="flex w-full bg-[#004098] text-white text-center pr-[8vw]">
+    <header className="fixed top-0 left-0 z-50 w-full bg-[#004098] text-white text-center">
       <nav
-        className="flex gap-5 justify-between w-full whitespace-nowrap mx-[18vw] my-1 content-center items-center
+        className="flex gap-5 justify-between whitespace-nowrap my-1 mx-[13vw] content-center items-center
      max-lg:flex-col max-lg:text-center max-lg:pb-0  max-lg:my-0 max-lg:h-[15vh]"
       >
         {/* 로고 폰트 적용 링크 */}
@@ -20,7 +20,7 @@ const Header = () => {
             />
           </div>
         </Link>
-        <div className="flex gap-7 items-center justify-center text-base/6">
+        <div className="flex gap-7 items-center justify-center text-base/6 mr-[12vw]">
           <a
             className="my-auto basis-auto font-museo  hover:font-extrabold"
             href="https://z17pcyw51c1.typeform.com/to/xFWIie3s"

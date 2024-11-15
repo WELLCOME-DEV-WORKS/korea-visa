@@ -65,7 +65,7 @@ const KVLandingSection3 = () => {
             }
           >
             <span>영주</span>
-            <p>permanent residence</p>
+            <p>Permanent residence</p>
           </div>
         </div>
         <div className="kv-third-subtext">
@@ -133,7 +133,7 @@ const KVLandingSection3 = () => {
             }
           >
             <span>영주</span>
-            <p>permanent residence</p>
+            <p>Permanent residence</p>
           </div>
         </div>
         <div className="kv-third-subbox-mobile">

@@ -15,7 +15,7 @@ const KVLandingSection1 = () => {
         <div className="kv-slogan">
           한국에서 활동을 시작하는
           <br />
-          <span className="sloganText1">First Step</span>
+          <span className="sloganText1">First Step</span>&nbsp;
           <span className="sloganText2">Visa!</span>
         </div>
         <div className="kv-first-button" onClick={openForm}>
@@ -28,7 +28,7 @@ const KVLandingSection1 = () => {
         <div className="kv-slogan-mobile">
           <div className="sloganText-mobile">한국에서 활동을 시작하는</div>
           <div className="sloganText2-mobile">
-            <span className="sloganText1">First Step</span>
+            <span className="sloganText1">First Step</span>&nbsp;
             <span>Visa!</span>
           </div>
         </div>

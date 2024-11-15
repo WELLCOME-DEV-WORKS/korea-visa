@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "./ui/Header";
 import GoogleAnalytics from "@/utils/GoogleAnalytics";
+import MetaPixel from "@/utils/MetaPixel";
 
 
 // import "../styles/globals.css";
@@ -33,6 +34,7 @@ export default function RootLayout({
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <GoogleAnalytics />
+        <MetaPixel />
         <Header />
         {children}
       </body>

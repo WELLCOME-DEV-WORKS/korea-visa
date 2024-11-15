@@ -26,7 +26,7 @@ const Header = () => {
         >
           <a
             className="my-auto basis-auto font-museo  hover:font-extrabold"
-            href="https://z17pcyw51c1.typeform.com/to/xFWIie3s"
+            href="http://localhost:3000/Investment"
           >
             투자
           </a>

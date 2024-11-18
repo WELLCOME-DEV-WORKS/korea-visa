@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import "@/app/Investment/Section1.css";
-import "@/app/Investment/KI_Landing_Global.css";
+import "../styles/KI_Landing_Global.css";
+import "../styles/Section1.css";
 
 const Section1 = () => {
   return (

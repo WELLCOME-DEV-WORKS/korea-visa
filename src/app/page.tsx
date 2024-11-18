@@ -1,9 +1,5 @@
-import LandingPage from "./KoreaVisa/page";
+import React from "react";
 
 export default function Home() {
-  return (
-    <>
-      <LandingPage />
-    </>
-  );
+  return <div>Landing</div>;
 }

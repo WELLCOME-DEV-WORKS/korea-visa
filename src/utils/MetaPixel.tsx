@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Script from "next/script";
 import React from "react";
 
@@ -5,7 +6,7 @@ const MetaPixel = () => {
   return (
     <div>
       {/* Meta Pixel Code */}
-      <Script id="MetaPixel">
+      <Script id="MetaPixel" strategy="afterInteractive">
         {`
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -21,14 +22,13 @@ const MetaPixel = () => {
       </Script>
 
       <noscript>
-        {`
-        <img
+        <Image
           height="1"
           width="1"
-          style="display:none"
+          //   style={{ display: "none" }}
           src="https://www.facebook.com/tr?id=3494082880736122&ev=PageView&noscript=1"
+          alt="Meta Pixel"
         />
-        `}
       </noscript>
 
       {/* End Meta Pixel Code */}

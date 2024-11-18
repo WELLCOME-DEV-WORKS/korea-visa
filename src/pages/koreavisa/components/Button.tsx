@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import "@/styles/KoreaVisa/KVLandingSection1.css";
 
 const urlOpen = (link: string) => {
   if (link) {

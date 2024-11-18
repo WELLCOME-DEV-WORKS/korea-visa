@@ -1,9 +1,13 @@
+.body {
+  background-color: #0f0f0f !important;
+}
+
 .ki-section1-container {
-  background-color: black;
+  background-color: #0f0f0f;
 }
 
 .ki-section1-box {
-  background-color: black;
+  background-color: #0f0f0f;
   display: flex;
   width: 590px;
   max-width: 100%;
@@ -11,7 +15,7 @@
 }
 
 .ki-section1-title {
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 0 2em #8c5bd0;
   font: 400 64px GangwonEduPower, sans-serif;
   background: linear-gradient(to left, #f2e9ff 0%, #8c5bd0 47%, #6223ba 88%);
   background-clip: text;

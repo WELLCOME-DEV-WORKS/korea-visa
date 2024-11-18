@@ -20,10 +20,9 @@ body {
 }
 
 .ki-section2-container {
+  background-color: #0f0f0f;
   height: auto;
-  margin-top: 250px;
-  /* margin: 150px 0px; */
-  background-color: #fff;
+  padding: 150px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +57,7 @@ body {
   align-items: center;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   margin: 2rem 0;
-  background-color: #000;
+  background-color: #0f0f0f;
   box-shadow: 0 0 12px #ccb4ed;
   align-self: center;
   font: 800 1.2rem SUIT Variable, sans-serif;
@@ -86,7 +85,7 @@ body {
 }
 
 .ki-section2-bg {
-  background-color: black;
+  background-color: #0f0f0f;
 }
 
 .ki-section2-title {
@@ -120,7 +119,7 @@ body {
   max-width: 100%;
   flex-direction: column;
   padding: 1.5rem 2rem;
-  box-shadow: 0 0 12px #ccb4ed;
+  box-shadow: 0 -5px 8px #ccb4ed;
 }
 
 .ki-section2-img {

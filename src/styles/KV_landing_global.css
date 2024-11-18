@@ -37,8 +37,12 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 
 /* SUIT 폰트 */
-@import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css");
-
+@font-face {
+  font-family: "SUIT Variable";
+  src: url("../../public/fonts/SUIT-Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 /********* 
   공통 레이아웃
   **********/

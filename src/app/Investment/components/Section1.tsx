@@ -5,7 +5,7 @@ import "@/app/Investment/KI_Landing_Global.css";
 
 const Section1 = () => {
   return (
-    <section className="ki-container ">
+    <section className="ki-container">
       <h1 className="ki-section1-title">
         한국에 투자?
         <br />

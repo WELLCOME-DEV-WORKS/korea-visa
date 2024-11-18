@@ -59,15 +59,14 @@ body {
 /* 웹 */
 .ki-container {
   height: auto;
-  margin-top: 250px;
-  /* margin: 150px 0px; */
-  /* background-color: #fff; */
+  padding: 150px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* background: black; */
+  width: 100vw !important;
+  background-color: #0f0f0f !important;
 }
 /* 반응형 */
 

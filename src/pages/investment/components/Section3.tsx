@@ -4,7 +4,7 @@ const Section3 = () => {
   return (
     <>
       {/* 데스크탑 */}
-      <section className="container text-white">
+      <section className="container text-white  bg-[#0F0F0F]">
         <div className="text-[2.5rem] font-[400] font-gangwon bg-gradient-to-left bg-clip-text text-transparent text-shadow-purple ">
           한국 투자 비자에 대해 얼마나 알고 계신가요?
         </div>

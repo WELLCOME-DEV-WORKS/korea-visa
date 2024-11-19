@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/Section2.css";
+import "../styles/KI_Global.css";
+
 const Section2 = () => {
   return (
     <>

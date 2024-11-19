@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import "../styles/KI_Landing_Global.css";
+import "../styles/KI_Global.css";
 import "../styles/Section1.css";
 
 const Section1 = () => {

@@ -1,27 +1,31 @@
 export interface TaxDetails {
   detail: string;
-  price: number | "무료";
+  price: number; // 공과금 가격
 }
 
 export interface ServiceItem {
   name: string;
-  price: number | "무료";
+  price: number; // 가격 (0일 경우 무료)
+  isIncluded?: boolean; // 기본 서비스 포함 여부
+  isFree?: boolean; // 무료 여부
+  isCounsel?: boolean; // '나라별 상이' 인 경우
 }
 
 export interface ServiceDetails {
   detail: ServiceItem[];
-  price: number | "무료";
+  price?: number;
 }
 
 export interface VisaDetails {
   tax: TaxDetails;
   basicService: ServiceDetails;
   additionalService: ServiceDetails;
-  totalPrice: number;
+  VAT?: number;
 }
 
 export interface PriceObject {
-  businessVisa: VisaDetails;
+  //   businessVisa: VisaDetails;
+  //   businessVisaAdd: VisaDetails;
   jobSearchVisa: VisaDetails;
   employmentVisa: VisaDetails;
   overseasVisa: VisaDetails;
@@ -29,35 +33,65 @@ export interface PriceObject {
   residence: VisaDetails;
   accompanyingVisa: VisaDetails;
 }
+
+// isIncluded: 기본 서비스에 포함된 항목 여부(ex. 5개 서비스 다 합쳐서 만원 이런식.. )
+// isFree: 해당 항목이 무료인지 여부
+
 const PriceObject = (): PriceObject => {
   return {
-    /** 
-      사업비자
-      **/
-    businessVisa: {
-      tax: {
-        detail: "출입국 외국인청 인지료",
-        price: 130000,
-      },
-      basicService: {
-        detail: [
-          { name: "사업비자 발급 대행", price: 990000 },
-          { name: "사업자 등록", price: "무료" },
-          { name: "통번역", price: "무료" },
-          { name: "멤버십 서비스 제공", price: "무료" },
-          { name: "사업 컨설팅", price: "무료" },
-        ],
-        price: 990000,
-      },
-      additionalService: {
-        detail: [
-          { name: "제출 대행", price: 100000 },
-          { name: "업무 지원", price: 100000 },
-        ],
-        price: 200000,
-      },
-      totalPrice: 1320000,
-    },
+    // /**
+    //   사업비자
+    //   **/
+    // businessVisa: {
+    //   tax: {
+    //     detail: "출입국 외국인청 인지료",
+    //     price: 130000,
+    //   },
+    //   basicService: {
+    //     detail: [
+    //       { name: "사업비자 발급 대행", price: 990000 },
+    //       { name: "사업자 등록", price: "무료" },
+    //       { name: "통번역", price: "무료" },
+    //       { name: "멤버십 서비스 제공", price: "무료" },
+    //       { name: "사업 컨설팅", price: "무료" },
+    //     ],
+    //   },
+    //   additionalService: {
+    //     detail: [
+    //       { name: "제출 대행", price: 100000 },
+    //       { name: "업무 지원", price: 100000 },
+    //     ],
+    //     price: 200000,
+    //   },
+    //   VAT: 99000,
+    // },
+    // /**
+    //   사업비자의 부가서비스(법인설립)
+    //   **/
+    // businessVisaAdd: {
+    //   tax: {
+    //     detail: "출입국 외국인청 인지료",
+    //     price: 130000,
+    //   },
+    //   basicService: {
+    //     detail: [
+    //       { name: "사업비자 발급 대행", price: 990000 },
+    //       { name: "사업자 등록", price: "무료" },
+    //       { name: "통번역", price: "무료" },
+    //       { name: "멤버십 서비스 제공", price: "무료" },
+    //       { name: "사업 컨설팅", price: "무료" },
+    //     ],
+    //     price: 990000,
+    //   },
+    //   additionalService: {
+    //     detail: [
+    //       { name: "제출 대행", price: 100000 },
+    //       { name: "업무 지원", price: 100000 },
+    //     ],
+    //     price: 200000,
+    //   },
+    //   VAT: 1320000,
+    // },
 
     /** 
       구직비자
@@ -69,20 +103,33 @@ const PriceObject = (): PriceObject => {
       },
       basicService: {
         detail: [
-          { name: "초기상담 및 비자 유형 선정", price: 200000 },
-          { name: "서류 준비 및 검토 ", price: 150000 },
-          { name: "비자 신청서 작성 및 제출", price: 150000 },
+          {
+            name: "초기상담 및 비자 유형 선정",
+            price: 99000,
+            isIncluded: true,
+          },
+          { name: "서류 준비 및 검토", price: 99000, isIncluded: true },
+          { name: "비자 신청서 작성 및 제출", price: 99000, isIncluded: true },
+          {
+            name: "출입국 사무소 대응 및 진행 상황 관리",
+            price: 99000,
+            isIncluded: true,
+          },
+          { name: "비자 발급 후 후속관리", price: 99000, isIncluded: true },
+          {
+            name: "인턴신고 (적합한 직종코드 제안 + 취업컨설팅)",
+            price: 0,
+            isFree: true,
+          },
         ],
-        price: 500000,
       },
       additionalService: {
         detail: [
-          { name: "제출 대행", price: 100000 },
-          { name: "업무 지원", price: 100000 },
+          { name: "시간제 취업 허가", price: 100000 },
+          { name: "제출 대행", price: 150000 },
         ],
-        price: 200000,
       },
-      totalPrice: 830000,
+      VAT: 9900,
     },
 
     /** 
@@ -95,46 +142,58 @@ const PriceObject = (): PriceObject => {
       },
       basicService: {
         detail: [
-          { name: "취업 상담", price: 200000 },
-          { name: "서류 검토", price: 150000 },
-          { name: "비자 신청서 작성 및 제출", price: 150000 },
+          {
+            name: "초기상담 및 비자 유형 선정",
+            price: 770000,
+            isIncluded: true,
+          },
+          { name: "서류 준비 및 검토", price: 770000, isIncluded: true },
+          { name: "비자 신청서 작성 및 제출", price: 770000, isIncluded: true },
+          {
+            name: "출입국 사무소 대응 및 진행 상황 관리",
+            price: 770000,
+            isIncluded: true,
+          },
+          { name: "비자 발급 후 후속관리", price: 770000, isIncluded: true },
         ],
-        price: 500000,
       },
       additionalService: {
-        detail: [
-          { name: "제출 대행", price: 100000 },
-          { name: "업무 지원", price: 100000 },
-        ],
-        price: 200000,
+        detail: [{ name: "제출 대행", price: 150000 }],
       },
-      totalPrice: 830000,
+      VAT: 77000,
     },
-
     /** 
       동포비자
       **/
     overseasVisa: {
       tax: {
-        detail: "투자 비자 공과금",
-        price: 200000,
+        detail: "출입국 외국인청 인지료",
+        price: 130000,
       },
       basicService: {
         detail: [
-          { name: "투자 상담", price: 500000 },
-          { name: "서류 준비 및 검토", price: 300000 },
-          { name: "비자 신청서 제출", price: 200000 },
+          {
+            name: "초기상담 및 비자 유형 선정",
+            price: 250000,
+            isIncluded: true,
+          },
+          { name: "서류 준비 및 검토", price: 250000, isIncluded: true },
+          { name: "비자 신청서 작성 및 제출", price: 250000, isIncluded: true },
+          {
+            name: "출입국 사무소 대응 및 진행 상황 관리",
+            price: 250000,
+            isIncluded: true,
+          },
+          { name: "비자 발급 후 후속관리", price: 250000, isIncluded: true },
         ],
-        price: 1000000,
       },
       additionalService: {
         detail: [
-          { name: "사업 등록 지원", price: 200000 },
-          { name: "법률 자문", price: 100000 },
+          { name: "제출 대행", price: 150000 },
+          { name: "범죄경력증명서 아포스티유 ", price: 0, isCounsel: true },
         ],
-        price: 300000,
       },
-      totalPrice: 1500000,
+      VAT: 25000,
     },
 
     /** 
@@ -142,28 +201,34 @@ const PriceObject = (): PriceObject => {
       **/
     marriageVisa: {
       tax: {
-        detail: "출입국 외국인청 인지료",
+        detail: "출입국 외국인청 인지료 ",
         price: 130000,
       },
       basicService: {
         detail: [
-          { name: "초기상담 및 비자 유형 선정", price: 200000 },
-          { name: "서류 준비 및 검토", price: 300000 },
-          { name: "비자 신청서 작성 및 제출", price: 200000 },
-          { name: "출입국 사무소 대응 및 진행 상황 관리", price: 100000 },
-          { name: "비자 발급 후 후속관리", price: 80000 },
+          {
+            name: "초기상담 및 비자 유형 선정",
+            price: 880000,
+            isIncluded: true,
+          },
+          { name: "서류 준비 및 검토", price: 880000, isIncluded: true },
+          { name: "비자 신청서 작성 및 제출", price: 880000, isIncluded: true },
+          {
+            name: "출입국 사무소 대응 및 진행 상황 관리",
+            price: 880000,
+            isIncluded: true,
+          },
+          { name: "비자 발급 후 후속관리", price: 880000, isIncluded: true },
         ],
-        price: 880000,
       },
       additionalService: {
         detail: [
-          { name: "제출 대행", price: 50000 },
-          { name: "범죄경력증명서 아포스티유", price: 70000 },
-          { name: "혼인신고 대행", price: 30000 },
+          { name: "제출 대행", price: 150000 },
+          { name: "범죄경력증명서 아포스티유", price: 0, isCounsel: true },
+          { name: "혼인신고 대행", price: 0, isCounsel: true },
         ],
-        price: 150000,
       },
-      totalPrice: 1160000,
+      VAT: 88000,
     },
 
     /** 
@@ -171,25 +236,37 @@ const PriceObject = (): PriceObject => {
       **/
     residence: {
       tax: {
-        detail: "재외동포 관련 공과금",
-        price: 80000,
+        detail: "출입국 외국인청 인지료",
+        price: 230000,
       },
       basicService: {
         detail: [
-          { name: "초기 상담", price: 200000 },
-          { name: "서류 검토", price: 200000 },
-          { name: "비자 발급 지원", price: 200000 },
+          {
+            name: "초기상담 및 비자 유형 선정",
+            price: 1200000,
+            isIncluded: true,
+          },
+          { name: "서류 준비 및 검토", price: 1200000, isIncluded: true },
+          {
+            name: "비자 신청서 작성 및 제출",
+            price: 1200000,
+            isIncluded: true,
+          },
+          {
+            name: "출입국 사무소 대응 및 진행 상황 관리",
+            price: 1200000,
+            isIncluded: true,
+          },
+          { name: "비자 발급 후 후속관리", price: 1200000, isIncluded: true },
         ],
-        price: 600000,
       },
       additionalService: {
         detail: [
-          { name: "추가 서류 준비", price: 80000 },
-          { name: "현지 사무소 대응", price: 70000 },
+          { name: "제출 대행", price: 250000 },
+          { name: "범죄경력증명서 아포스티유 ", price: 0, isCounsel: true },
         ],
-        price: 150000,
       },
-      totalPrice: 830000,
+      VAT: 120000,
     },
 
     /** 
@@ -197,25 +274,30 @@ const PriceObject = (): PriceObject => {
       **/
     accompanyingVisa: {
       tax: {
-        detail: "영주권 공과금",
-        price: 150000,
+        detail: "출입국 외국인청 인지료",
+        price: 130000,
       },
       basicService: {
         detail: [
-          { name: "영주 상담", price: 300000 },
-          { name: "서류 검토", price: 300000 },
-          { name: "영주권 신청 지원", price: 300000 },
+          {
+            name: "초기상담 및 비자 유형 선정",
+            price: 350000,
+            isIncluded: true,
+          },
+          { name: "서류 준비 및 검토", price: 350000, isIncluded: true },
+          { name: "비자 신청서 작성 및 제출", price: 350000, isIncluded: true },
+          {
+            name: "출입국 사무소 대응 및 진행 상황 관리",
+            price: 350000,
+            isIncluded: true,
+          },
+          { name: "비자 발급 후 후속관리", price: 350000, isIncluded: true },
         ],
-        price: 900000,
       },
       additionalService: {
-        detail: [
-          { name: "현지 지원", price: 150000 },
-          { name: "추가 자문", price: 100000 },
-        ],
-        price: 250000,
+        detail: [{ name: "제출 대행", price: 150000 }],
       },
-      totalPrice: 1300000,
+      VAT: 35000,
     },
   };
 };

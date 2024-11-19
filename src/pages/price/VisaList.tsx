@@ -43,7 +43,7 @@ const VisaList = ({ visaOptions = defaultVisaOptions }) => {
               "focus:outline-none focus:ring-2 focus:ring-indigo-500"
             )}
           >
-            {selected ? selected.type : "비용이 궁금한 비자를 선택해주세요."}
+            {selected ? selected.type : "비자를 선택하세요"}
             <ChevronDownIcon
               className="absolute top-1/2 right-3 w-5 h-5 -translate-y-1/2 text-gray-500"
               aria-hidden="true"
@@ -64,7 +64,7 @@ const VisaList = ({ visaOptions = defaultVisaOptions }) => {
                   clsx(
                     "cursor-pointer select-none py-2 px-4",
                     active ? "bg-indigo-100 text-indigo-900" : "text-gray-700",
-                    selected && "font-bold"
+                    selected && "font-bold "
                   )
                 }
               >
@@ -73,7 +73,7 @@ const VisaList = ({ visaOptions = defaultVisaOptions }) => {
                     <span>{visa.type}</span>
                     {selected && (
                       <CheckIcon
-                        className="inline-block w-5 h-5 ml-2 text-indigo-500"
+                        className="invisible size-1 fill-indigo-500 group-data-[selected]:visible"
                         aria-hidden="true"
                       />
                     )}

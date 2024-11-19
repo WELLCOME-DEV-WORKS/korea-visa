@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import GoogleTag from "@/utils/GoogleTag";
 import MetaPixel from "@/utils/MetaPixel";
+import ChannelTalk from "@/utils/ChannelTalk";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <GoogleTag />
         <MetaPixel />
+        <ChannelTalk />
         {children}
       </body>
     </html>

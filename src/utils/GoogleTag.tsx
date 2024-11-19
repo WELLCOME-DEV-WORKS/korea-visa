@@ -35,7 +35,7 @@ const GoogleTag = () => {
         {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', ${GTag_Manager};`}
+        gtag('config', '${GTag_Manager}');`}
       </Script>
     </>
   );

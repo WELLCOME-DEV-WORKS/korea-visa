@@ -4,10 +4,10 @@ import Section2 from "@/pages/investment/components/Seciont2";
 
 const page = () => {
   return (
-    <div className="bg-[#0F0F0F]">
+    <>
       <Section1 />
       <Section2 />
-    </div>
+    </>
   );
 };
 

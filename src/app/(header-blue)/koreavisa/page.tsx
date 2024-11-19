@@ -7,12 +7,10 @@ import KVSection5 from "@/pages/koreavisa/components/KVSection5";
 import KVSection6 from "@/pages/koreavisa/components/KVSection6";
 import KVSection7 from "@/pages/koreavisa/components/KVSection7";
 import KVSection8 from "@/pages/koreavisa/components/KVSection8";
-import Header from "@/ui/Header";
 
 const LandingPage = () => {
   return (
     <>
-      <Header />
       <KVSection1 />
       <KVSection2 />
       <KVSection3 />

@@ -2,9 +2,15 @@
 import Link from "next/link";
 import React from "react";
 
-const Header = () => {
+interface HeaderProps {
+  headerColor: string;
+}
+
+const Header = ({ headerColor }: HeaderProps) => {
   return (
-    <header className="sticky top-0 left-0 mb-8 z-50 w-full bg-[#004098] text-white text-center">
+    <header
+      className={`sticky top-0 left-0 z-50 w-full ${headerColor} text-white text-center`}
+    >
       <nav
         className="flex gap-5 justify-between whitespace-nowrap my-1 mx-[13vw] content-center items-center
      max-lg:flex-col max-lg:text-center max-lg:pb-0  max-lg:my-0 max-lg:h-[15vh]"

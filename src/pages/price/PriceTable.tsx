@@ -8,13 +8,13 @@ interface PriceTableProps {
 }
 
 const PriceTable = ({ visaDetails }: PriceTableProps) => {
+  const [selectedAdditional, setSelectedAdditional] = useState<number[]>([]);
   if (!visaDetails) {
     return <div className="text-center mt-2">비자 종류를 선택해주세요.</div>;
   }
 
   const { tax, basicService, additionalService, VAT } = visaDetails;
   // 체크된 부가서비스를 관리하는 상태
-  const [selectedAdditional, setSelectedAdditional] = useState<number[]>([]);
 
   // 총 비용 계산
   const totalPrice =

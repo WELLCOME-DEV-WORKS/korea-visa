@@ -4,7 +4,7 @@ import PriceTable from "@/pages/price/PriceTable";
 import DropDown from "@/pages/price/DropDown";
 import { PriceObject } from "@/pages/price/PriceObject";
 
-const page = () => {
+export default function Page() {
   const [selectedVisa, setSelectedVisa] = useState<string | null>(null);
   const priceData = PriceObject();
   // 선택된 비자 정보 가져오기
@@ -36,6 +36,4 @@ const page = () => {
       </div>
     </>
   );
-};
-
-export default page;
+}

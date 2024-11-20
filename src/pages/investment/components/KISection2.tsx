@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/Section2.css";
+import "../styles/KISection2.css";
 import "../styles/KI_Global.css";
 
-const Section2 = () => {
+const KISection2 = () => {
   return (
     <>
       {/* 데스크탑 */}
@@ -56,4 +56,4 @@ const Section2 = () => {
   );
 };
 
-export default Section2;
+export default KISection2;

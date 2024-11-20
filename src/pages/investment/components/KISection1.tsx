@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import "../styles/KI_Global.css";
-import "../styles/Section1.css";
+import "../styles/KISection1.css";
 
-const Section1 = () => {
+const KISection1 = () => {
   return (
     <section className="ki-container">
       <h1 className="ki-section1-title">
@@ -18,4 +18,4 @@ const Section1 = () => {
   );
 };
 
-export default Section1;
+export default KISection1;

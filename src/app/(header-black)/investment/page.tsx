@@ -1,12 +1,14 @@
 import React from "react";
-import Section1 from "@/pages/investment/components/Section1";
-import Section2 from "@/pages/investment/components/Seciont2";
+import KISection1 from "@/pages/investment/components/KISection1";
+import KISection2 from "@/pages/investment/components/KISection2";
+import KISection3 from "@/pages/investment/components/KISection3";
 
 const page = () => {
   return (
     <>
-      <Section1 />
-      <Section2 />
+      <KISection1 />
+      <KISection2 />
+      <KISection3 />
     </>
   );
 };

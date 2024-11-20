@@ -12,29 +12,34 @@ import clsx from "clsx";
 interface VisaType {
   id: number;
   type: string;
+  value: string;
 }
-
 interface ListProps {
-  visaOptions: VisaType[];
+  onVisaChange: (visa: string) => void;
 }
 
 // 기본 비자 옵션 리스트
 const defaultVisaOptions: VisaType[] = [
-  { id: 1, type: "사업비자" },
-  { id: 2, type: "구직비자" },
-  { id: 3, type: "취업비자" },
-  { id: 4, type: "동포비자" },
-  { id: 5, type: "결혼비자" },
-  { id: 6, type: "영주권" },
-  { id: 7, type: "동반비자" },
+  { id: 1, type: "사업비자", value: "businessVisa" },
+  { id: 2, type: "구직비자", value: "jobSearchVisa" },
+  { id: 3, type: "취업비자", value: "employmentVisa" },
+  { id: 4, type: "동포비자", value: "overseasVisa" },
+  { id: 5, type: "결혼비자", value: "marriageVisa" },
+  { id: 6, type: "영주권", value: "residence" },
+  { id: 7, type: "동반비자", value: "accompanyingVisa" },
 ];
 
-const VisaList = ({ visaOptions = defaultVisaOptions }) => {
+const VisaList = ({ onVisaChange }: ListProps) => {
   const [selected, setSelected] = useState<VisaType | null>(null);
+
+  const handleChange = (visa: VisaType) => {
+    setSelected(visa);
+    onVisaChange(visa.value);
+  };
 
   return (
     <div className="mx-auto w-[24em] p-4">
-      <Listbox value={selected} onChange={setSelected}>
+      <Listbox value={selected} onChange={handleChange}>
         <div className="relative">
           {/* 버튼 */}
           <ListboxButton
@@ -56,7 +61,7 @@ const VisaList = ({ visaOptions = defaultVisaOptions }) => {
               "absolute mt-2 w-full rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-10"
             )}
           >
-            {visaOptions.map((visa) => (
+            {defaultVisaOptions.map((visa) => (
               <ListboxOption
                 key={visa.id}
                 value={visa}

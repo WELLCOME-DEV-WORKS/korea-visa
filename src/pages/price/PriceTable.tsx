@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { VisaDetails } from "./PriceObject";
+import { VisaDetails } from "../../data/PriceObject";
 import { Checkbox } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/16/solid";
 

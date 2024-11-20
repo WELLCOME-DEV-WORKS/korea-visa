@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import PriceTable from "@/pages/price/PriceTable";
 import DropDown from "@/pages/price/DropDown";
-import { PriceObject } from "@/pages/price/PriceObject";
+import { PriceObject } from "@/data/PriceObject";
 
 export default function Page() {
   const [selectedVisa, setSelectedVisa] = useState<string | null>(null);

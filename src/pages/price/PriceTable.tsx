@@ -19,29 +19,26 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
           <div className=" border-gray-300 p-2 w-1/2 text-lg rounded-tl-xl">
             공과금
           </div>
-          <div className="border border-gray-300 p-2 w-1/2 text-lg rounded-tr-xl">
+          <div className="border-l border-gray-300 p-2 w-1/2 text-lg rounded-tr-xl">
             기본 서비스
           </div>
         </div>
         {/* 공과금 */}
         <div className="text-left">
           <div className="flex">
-            <div className="border border-gray-300 p-2 w-1/2">
+            <div className="border border-gray-300 p-2 w-6/12">
               <div className="py-1 h-[2em] border-b border-gray-200 flex flex-row">
                 <div className="w-1/2 text-left">{tax.detail}</div>
                 <div className="w-1/2 text-right font-semibold">
-                  {tax.price.toLocaleString()} 원
+                  {tax.price.toLocaleString()}원
                 </div>
               </div>
               {[...Array(4)].map((_, index) => (
-                <div
-                  key={index}
-                  className="py-1 h-[2em] border-b border-gray-200"
-                ></div>
+                <div key={index} className="py-1 h-[2em] border-gray-200"></div>
               ))}
             </div>
             {/* 기본 서비스 */}
-            <div className="border border-gray-300 p-2 w-1/2">
+            <div className="border border-gray-300 p-2 w-5/12">
               {basicService.detail
                 .filter((service) => service.isIncluded)
                 .map((service, idx) => (
@@ -57,16 +54,28 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
                     {service.name}
                   </div>
                 ))}
+              <div className="py-1 border-t border-gray-200">
+                <div>부가세</div>
+              </div>
+            </div>
+            {/* 가격은 한 번만 표시 */}
+            <div className="p-2 text-right font-bold flex flex-col items-center justify-center w-1/12">
+              <div className="h-5/6 w-full flex items-center justify-center">
+                {basicService.detail.some((service) => service.isIncluded)
+                  ? `${basicService.detail[0].price.toLocaleString()}원`
+                  : ""}
+              </div>
+              <div className="h-1/6 w-full flex items-center justify-center border-t border-gray-200">
+                {VAT ? `${VAT.toLocaleString()}원` : "0원"}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="w-full border-gray-300 border-t-0">
-        <div className="bg-[#373749] text-center flex text-white">
-          <div className="border border-gray-300 p-2 w-full text-lg">
-            부가 서비스
-          </div>
+      <div className="w-full  border-gray-300 border-t-0">
+        <div className=" bg-[#373749] text-center flex text-white ">
+          <div className="border-gray-300 p-2 w-full text-lg">부가 서비스</div>
         </div>
         <div className="text-left">
           <div className="border border-gray-300 p-2">
@@ -76,7 +85,7 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
                 <div className="text-right w-1/2 font-semibold">
                   {service.isCounsel
                     ? "나라별 상이"
-                    : `${service.price.toLocaleString()} 원`}
+                    : `${service.price.toLocaleString()}원`}
                 </div>
               </div>
             ))}
@@ -92,7 +101,7 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
           >
             <div className="w-1/2 text-left">총 비용</div>
             <div className="w-1/2 text-right font-semibold">
-              {(basicService.price ?? 0) + (VAT ?? 0)} 원
+              {(basicService.price ?? 0) + (VAT ?? 0)}원
             </div>
           </div>
         </div>

@@ -44,7 +44,7 @@ const VisaList = ({ onVisaChange }: ListProps) => {
           {/* 버튼 */}
           <ListboxButton
             className={clsx(
-              "block w-full rounded-lg bg-gray-100 py-2 px-3 text-left text-sm",
+              "block w-full rounded-lg bg-gray-100 py-2 px-3 text-left text-lg",
               "focus:outline-none focus:ring-2 focus:ring-indigo-500"
             )}
           >

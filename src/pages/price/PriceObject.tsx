@@ -1,11 +1,11 @@
 export interface TaxDetails {
   detail: string;
-  price: number; // 공과금 가격
+  price: number;
 }
 
 export interface ServiceItem {
   name: string;
-  price: number; // 가격 (0일 경우 무료)
+  price: number;
   isIncluded?: boolean; // 기본 서비스 포함 여부
   isFree?: boolean; // 무료 여부
   isCounsel?: boolean; // '나라별 상이' 인 경우

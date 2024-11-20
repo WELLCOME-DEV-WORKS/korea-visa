@@ -1,3 +1,4 @@
+import Footer from "@/ui/Footer";
 import Header from "@/ui/Header";
 
 export default async function RootLayout({
@@ -5,11 +6,12 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const headerColor = "bg-[#0F0F0F]";
+  const baseColor = "bg-[#0F0F0F]";
   return (
     <>
-      <Header headerColor={headerColor} />
+      <Header headerColor={baseColor} />
       {children}
+      <Footer footerColor={baseColor} />
     </>
   );
 }

@@ -135,9 +135,7 @@ body {
   .ki-section2-container-mobile {
     display: flex;
     height: auto;
-    margin-top: 3rem;
-    /* margin: 150px 0px; */
-    padding: 0 1rem;
+    padding: 3rem 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;

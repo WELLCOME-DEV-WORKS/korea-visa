@@ -5,11 +5,11 @@ import KISection3 from "@/pages/investment/components/KISection3";
 
 const page = () => {
   return (
-    <>
+    <div className="bg-black">
       <KISection1 />
       <KISection2 />
       <KISection3 />
-    </>
+    </div>
   );
 };
 

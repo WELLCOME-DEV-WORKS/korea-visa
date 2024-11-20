@@ -1,3 +1,4 @@
+import Footer from "@/ui/Footer";
 import Header from "@/ui/Header";
 
 export default async function RootLayout({
@@ -10,6 +11,7 @@ export default async function RootLayout({
     <>
       <Header headerColor={headerColor} />
       {children}
+      <Footer />
     </>
   );
 }

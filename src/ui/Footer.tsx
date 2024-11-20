@@ -1,8 +1,14 @@
 import React from "react";
 
-const Footer = () => {
+interface FooterProps {
+  footerColor: string;
+}
+
+const Footer = ({ footerColor }: FooterProps) => {
   return (
-    <footer className="bottom-0 flex gap-5 justify-between w-full bg-[#004098] max-md:max-w-full p-5 text-white  text-xs md:text-base">
+    <footer
+      className={`${footerColor} bottom-0 flex gap-5 justify-between w-full  max-md:max-w-full p-5 text-white  text-xs md:text-base`}
+    >
       <span>
         Company Name : Well-come Visa Co., Ltd. <br />
         Representative : Inhyuk Lee <br />

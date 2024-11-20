@@ -6,12 +6,13 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const headerColor = "bg-[#004098]";
+  const baseColor = "bg-[#004098]";
+
   return (
     <>
-      <Header headerColor={headerColor} />
+      <Header headerColor={baseColor} />
       {children}
-      <Footer />
+      <Footer footerColor={baseColor} />
     </>
   );
 }

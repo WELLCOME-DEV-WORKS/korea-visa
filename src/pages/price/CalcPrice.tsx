@@ -3,19 +3,18 @@ export const calcPrice = (
   taxPrice: number | undefined,
   basicPrice: number | undefined,
   VAT: number | undefined,
-  selectedAdditional: number[]
+  selectedAdditional: string[],
+  additionalServices: { name: string; price: number }[]
 ): number => {
-  // 기본 값이 undefined일 경우 0으로 처리
   const tax = taxPrice ?? 0;
   const basic = basicPrice ?? 0;
   const vat = VAT ?? 0;
 
-  // 추가 서비스 비용 합산
-  const additionalTotal = selectedAdditional.reduce(
-    (sum, price) => sum + price,
-    0
-  );
+  // 선택된 추가 서비스의 가격 합산
+  const additionalTotal = selectedAdditional.reduce((sum, name) => {
+    const service = additionalServices.find((s) => s.name === name);
+    return sum + (service?.price ?? 0);
+  }, 0);
 
-  // 총 비용 계산
   return tax + basic + vat + additionalTotal;
 };

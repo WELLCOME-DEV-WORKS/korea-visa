@@ -9,7 +9,8 @@ interface PriceTableProps {
 }
 
 const PriceTable = ({ visaDetails }: PriceTableProps) => {
-  const [selectedAdditional, setSelectedAdditional] = useState<number[]>([]);
+  const [selectedAdditional, setSelectedAdditional] = useState<string[]>([]);
+
   if (!visaDetails) {
     return <div className="text-center mt-2">비자 종류를 선택해주세요.</div>;
   }
@@ -21,7 +22,8 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
     tax.price,
     basicService.detail[0].price,
     VAT,
-    selectedAdditional
+    selectedAdditional,
+    additionalService.detail
   );
 
   // 체크체크!
@@ -32,9 +34,9 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
   console.log("총 비용 :", totalPrice);
 
   // 부가서비스 체크박스 상태 변경 핸들러
-  const handleAdditionalChange = (price: number, isChecked: boolean) => {
+  const handleAdditionalChange = (name: string, isChecked: boolean) => {
     setSelectedAdditional((prev) =>
-      isChecked ? [...prev, price] : prev.filter((p) => p !== price)
+      isChecked ? [...prev, name] : prev.filter((n) => n !== name)
     );
   };
 
@@ -107,14 +109,14 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
                       as="div"
                       key={idx}
                       className="flex flex-row w-full items-center group border-b border-gray-200"
-                      checked={selectedAdditional.includes(service.price)}
+                      checked={selectedAdditional.includes(service.name)}
                       onChange={(isChecked) =>
-                        handleAdditionalChange(service.price, isChecked)
+                        handleAdditionalChange(service.name, isChecked)
                       }
                     >
                       <div
                         className={`w-6 h-6 mx-3 flex items-center justify-center border rounded-md ${
-                          selectedAdditional.includes(service.price)
+                          selectedAdditional.includes(service.name)
                             ? "bg-blue-500 border-blue-500"
                             : "bg-gray-200 border-gray-300"
                         }`}

@@ -25,15 +25,6 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
     selectedAdditional,
     additionalService.detail
   );
-  const totalPrice = calcPrice(
-    tax.price,
-    basicService.detail[0].price,
-    VAT,
-    selectedAdditional,
-    additionalService.detail
-  );
-
-  // 체크체크!
 
   // 체크체크!
 
@@ -44,7 +35,6 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
   console.log("총 비용 :", totalPrice);
 
   // 부가서비스 체크박스 상태 변경 핸들러
-  const handleAdditionalChange = (name: string, isChecked: boolean) => {
   const handleAdditionalChange = (name: string, isChecked: boolean) => {
     setSelectedAdditional((prev) =>
       isChecked ? [...prev, name] : prev.filter((n) => n !== name)

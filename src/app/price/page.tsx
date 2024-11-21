@@ -4,13 +4,16 @@ import PriceTable from "@/pages/price/PriceTable";
 import DropDown from "@/pages/price/DropDown";
 import { PriceObject } from "@/data/PriceObject";
 
+
 const Page = () => {
+
   const [selectedVisa, setSelectedVisa] = useState<string | null>(null);
   const priceData = PriceObject();
   // 선택된 비자 정보 가져오기
   const selectedVisaDetails = selectedVisa ? priceData[selectedVisa] : null;
 
   return (
+
     <div className="container bg-white flex flex-col">
       <div className="text-center space-y-4">
         <h1 className="text-3xl font-bold">비용 안내</h1>
@@ -33,3 +36,4 @@ const Page = () => {
 };
 
 export default Page;
+

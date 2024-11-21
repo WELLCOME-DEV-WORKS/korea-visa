@@ -43,6 +43,7 @@ export interface PriceObject {
 
 export const PriceObject = (): PriceObject => {
   return {
+
     /**
       사업비자
       **/
@@ -96,6 +97,7 @@ export const PriceObject = (): PriceObject => {
       },
       VAT: 1320000,
     },
+
 
     /** 
       구직비자

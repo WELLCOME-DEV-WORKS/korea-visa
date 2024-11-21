@@ -33,7 +33,7 @@ const Header = ({ headerColor }: HeaderProps) => {
         >
           <a
             className="my-auto basis-auto font-museo hover:font-extrabold"
-            href="http://localhost:3000/Investment"
+            href="https://well-come.info/investment"
           >
             투자
           </a>

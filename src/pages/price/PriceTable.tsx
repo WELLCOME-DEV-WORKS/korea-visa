@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { VisaDetails } from "../../data/PriceObject";
 import { Checkbox } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/16/solid";
+import { calcPrice } from "./CalcPrice";
 
 interface PriceTableProps {
   visaDetails: VisaDetails | null;
@@ -14,16 +15,16 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
   }
 
   const { tax, basicService, additionalService, VAT } = visaDetails;
-  // 체크된 부가서비스를 관리하는 상태
 
   // 총 비용 계산
-  const totalPrice =
-    (tax.price ?? 0) +
-    (basicService.detail[0].price ?? 0) +
-    (VAT ?? 0) +
-    selectedAdditional.reduce((sum, price) => sum + price, 0);
+  const totalPrice = calcPrice(
+    tax.price,
+    basicService.detail[0].price,
+    VAT,
+    selectedAdditional
+  );
 
-  // 디버깅: 현재 상태와 계산값 출력
+  // 체크체크!
   console.log("체크한 부가서비스 :", selectedAdditional);
   console.log("공과금 :", tax.price);
   console.log("기본서비스 :", basicService.detail[0].price);

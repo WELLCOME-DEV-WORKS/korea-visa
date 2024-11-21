@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { VisaDetails } from "../../data/PriceObject";
 import { Checkbox } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/16/solid";
-import { calcPrice } from "./CalcPrice";
+import { calcPrice } from "../../utils/CalcPrice";
 
 interface PriceTableProps {
   visaDetails: VisaDetails | null;

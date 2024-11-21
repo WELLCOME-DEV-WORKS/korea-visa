@@ -23,7 +23,7 @@ export interface VisaDetails {
   VAT?: number;
 }
 
-export interface PriceObject {
+export interface VisaObject {
   //   businessVisa: VisaDetails;
   //   businessVisaAdd: VisaDetails;
   jobSearchVisa: VisaDetails;
@@ -34,14 +34,14 @@ export interface PriceObject {
   accompanyingVisa: VisaDetails;
 }
 
-export interface PriceObject {
+export interface VisaObject {
   [key: string]: VisaDetails; // 모든 string 키에 대해 VisaDetails 타입을 반환하도록 설정
 }
 
 // isIncluded: 기본 서비스에 포함된 항목 여부(ex. 5개 서비스 다 합쳐서 만원 이런식.. )
 // isFree: 해당 항목이 무료인지 여부
 
-export const PriceObject = (): PriceObject => {
+export const VisaObject = (): VisaObject => {
   return {
     /**
       사업비자

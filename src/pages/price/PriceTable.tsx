@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { VisaDetails } from "../../data/PriceObject";
+import { VisaDetails } from "../../data/VisaObject";
 import { Checkbox } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/16/solid";
 import { calcPrice } from "../../utils/CalcPrice";
@@ -52,7 +52,6 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
               공과금
             </div>
           </div>
-
           <div className="flex">
             {/* 기본 서비스 */}
             <div className="border border-gray-300 border-y-0 w-5/12">

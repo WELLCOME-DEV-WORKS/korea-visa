@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 import PriceTable from "@/pages/price/PriceTable";
 import DropDown from "@/pages/price/DropDown";
-import { PriceObject } from "@/data/PriceObject";
+import { VisaObject } from "@/data/VisaObject";
 
 const Page = () => {
   const [selectedVisa, setSelectedVisa] = useState<string | null>(null);
-  const priceData = PriceObject();
+  const priceData = VisaObject();
   // 선택된 비자 정보 가져오기
   const selectedVisaDetails = selectedVisa ? priceData[selectedVisa] : null;
 

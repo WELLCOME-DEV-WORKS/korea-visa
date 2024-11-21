@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import PriceTable from "@/pages/price/PriceTable";
 import DropDown from "@/pages/price/DropDown";
+import BusinessVisaTable from "@/pages/price/BusinessVisaTable";
+
 import { VisaObject } from "@/data/VisaObject";
 
 const Page = () => {
@@ -23,10 +25,18 @@ const Page = () => {
         <div className="w-full">
           <DropDown onVisaChange={setSelectedVisa} />
         </div>
-
-        <div className="w-full">
-          <PriceTable visaDetails={selectedVisaDetails} />
-        </div>
+        {/* 사업비자 */}
+        {selectedVisa === "businessVisa" && (
+          <div className="w-full">
+            <BusinessVisaTable visaDetails={selectedVisaDetails} />
+          </div>
+        )}
+        {/* 구직비자 ~ 동반비자 */}
+        {selectedVisa && selectedVisa !== "businessVisa" && (
+          <div className="w-full">
+            <PriceTable visaDetails={selectedVisaDetails} />
+          </div>
+        )}
       </div>
     </div>
   );

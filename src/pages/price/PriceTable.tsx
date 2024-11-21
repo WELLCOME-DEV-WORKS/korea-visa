@@ -10,7 +10,7 @@ interface PriceTableProps {
 
 const PriceTable = ({ visaDetails }: PriceTableProps) => {
   const [selectedAdditional, setSelectedAdditional] = useState<string[]>([]);
-
+  // visaDetails가 null인 경우 처리
   if (!visaDetails) {
     return <div className="text-center mt-2">비자 종류를 선택해주세요.</div>;
   }

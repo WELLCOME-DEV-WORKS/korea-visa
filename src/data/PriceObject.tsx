@@ -43,59 +43,61 @@ export interface PriceObject {
 
 export const PriceObject = (): PriceObject => {
   return {
-    // /**
-    //   사업비자
-    //   **/
-    // businessVisa: {
-    //   tax: {
-    //     detail: "출입국 외국인청 인지료",
-    //     price: 130000,
-    //   },
-    //   basicService: {
-    //     detail: [
-    //       { name: "사업비자 발급 대행", price: 990000 },
-    //       { name: "사업자 등록", price: "무료" },
-    //       { name: "통번역", price: "무료" },
-    //       { name: "멤버십 서비스 제공", price: "무료" },
-    //       { name: "사업 컨설팅", price: "무료" },
-    //     ],
-    //   },
-    //   additionalService: {
-    //     detail: [
-    //       { name: "제출 대행", price: 100000 },
-    //       { name: "업무 지원", price: 100000 },
-    //     ],
-    //     price: 200000,
-    //   },
-    //   VAT: 99000,
-    // },
-    // /**
-    //   사업비자의 부가서비스(법인설립)
-    //   **/
-    // businessVisaAdd: {
-    //   tax: {
-    //     detail: "출입국 외국인청 인지료",
-    //     price: 130000,
-    //   },
-    //   basicService: {
-    //     detail: [
-    //       { name: "사업비자 발급 대행", price: 990000 },
-    //       { name: "사업자 등록", price: "무료" },
-    //       { name: "통번역", price: "무료" },
-    //       { name: "멤버십 서비스 제공", price: "무료" },
-    //       { name: "사업 컨설팅", price: "무료" },
-    //     ],
-    //     price: 990000,
-    //   },
-    //   additionalService: {
-    //     detail: [
-    //       { name: "제출 대행", price: 100000 },
-    //       { name: "업무 지원", price: 100000 },
-    //     ],
-    //     price: 200000,
-    //   },
-    //   VAT: 1320000,
-    // },
+
+    /**
+      사업비자
+      **/
+    businessVisa: {
+      tax: {
+        detail: "출입국 외국인청 인지료",
+        price: 130000,
+      },
+      basicService: {
+        detail: [
+          { name: "사업비자 발급 대행", price: 990000 },
+          { name: "사업자 등록", price: 0, isFree: true },
+          { name: "통번역", price: 0, isFree: true },
+          { name: "멤버십 서비스 제공", price: 0, isFree: true },
+          { name: "사업 컨설팅", price: 0, isFree: true },
+        ],
+      },
+      additionalService: {
+        detail: [
+          { name: "", price: 0 },
+          { name: "", price: 0 },
+        ],
+        price: 0,
+      },
+      VAT: 99000,
+    },
+    /**
+      사업비자의 부가서비스(법인설립)
+      **/
+    businessVisaAdd: {
+      tax: {
+        detail: "출입국 외국인청 인지료",
+        price: 130000,
+      },
+      basicService: {
+        detail: [
+          { name: "사업비자 발급 대행", price: 990000 },
+          { name: "사업자 등록", price: 0, isFree: true },
+          { name: "통번역", price: 0, isFree: true },
+          { name: "멤버십 서비스 제공", price: 0, isFree: true },
+          { name: "사업 컨설팅", price: 0, isFree: true },
+        ],
+        price: 990000,
+      },
+      additionalService: {
+        detail: [
+          { name: "제출 대행", price: 100000 },
+          { name: "업무 지원", price: 100000 },
+        ],
+        price: 200000,
+      },
+      VAT: 1320000,
+    },
+
 
     /** 
       구직비자

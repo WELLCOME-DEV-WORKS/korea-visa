@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { VisaDetails } from "../../data/BusinessVisaObject";
-import { Checkbox } from "@headlessui/react";
-import { CheckIcon } from "@heroicons/react/16/solid";
-import { calcPrice } from "../../utils/CalcPrice";
+// import { Checkbox } from "@headlessui/react";
+// import { CheckIcon } from "@heroicons/react/16/solid";
+// import { calcPrice } from "../../utils/CalcPrice";
 
 interface BusinessVisaTableProps {
   visaDetails: VisaDetails | null;
@@ -12,7 +12,8 @@ const BusinessVisaTable = ({ visaDetails }: BusinessVisaTableProps) => {
   if (!visaDetails) {
     return <div className="text-center mt-2">비자 종류를 선택해주세요.</div>;
   }
-  const { tax, basicService, additionalService, VAT } = visaDetails;
+  // const { tax, basicService, additionalService, VAT } = visaDetails;
+  const { tax, basicService, VAT } = visaDetails;
 
   return (
     <>

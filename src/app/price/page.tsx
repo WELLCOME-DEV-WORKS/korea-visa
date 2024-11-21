@@ -6,7 +6,9 @@ import DropDown from "@/pages/price/DropDown";
 import { VisaObject } from "@/data/VisaObject";
 import { BusinessVisaObject } from "@/data/BusinessVisaObject";
 
+
 const Page = () => {
+
   const [selectedVisa, setSelectedVisa] = useState<string | null>(null);
   const visaData = VisaObject(); //
   const businessVisaData = BusinessVisaObject(); // businessVisa 데이터 로드
@@ -19,6 +21,7 @@ const Page = () => {
       : null;
 
   return (
+
     <div className="container bg-white flex flex-col">
       <div className="text-center space-y-4">
         <h1 className="text-3xl font-bold">비용 안내</h1>
@@ -49,3 +52,4 @@ const Page = () => {
 };
 
 export default Page;
+

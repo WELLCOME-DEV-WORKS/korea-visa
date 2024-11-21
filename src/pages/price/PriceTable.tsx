@@ -27,6 +27,7 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
   );
 
   // 체크체크!
+
   console.log("체크한 부가서비스 :", selectedAdditional);
   console.log("공과금 :", tax.price);
   console.log("기본서비스 :", basicService.detail[0].price);

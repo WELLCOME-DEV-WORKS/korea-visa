@@ -30,22 +30,49 @@ const BusinessVisaTable = ({ visaDetails }: BusinessVisaTableProps) => {
           </div>
           <div className="flex">
             {/* 기본 서비스 */}
-            <div className="border border-gray-300 border-y-0 w-5/12">
-              {basicService.detail.map((service, idx) => (
-                <div
-                  key={idx}
-                  className={`py-2.5 px-6 h-1/6 flex items-center justify-start ${
-                    idx !== basicService.detail.length - 1
-                      ? "border-b border-gray-200"
-                      : ""
-                  }`}
-                >
-                  {service.name}
+            <div></div>
+            <div></div>
+            <div className="flex flex-col border border-gray-300 border-y-0 w-1/2">
+              <div className="p-2 flex flex-row">
+                <div className="w-1/2">
+                  {basicService.detail.map((service, idx) => (
+                    <div
+                      key={idx}
+                      className={`w-full text-left py-1 px-4 ${
+                        idx !== basicService.detail.length - 1
+                          ? "border-b border-gray-200"
+                          : ""
+                      }`}
+                    >
+                      {service.name}
+                    </div>
+                  ))}
                 </div>
-              ))}
-              <div className="relative border-t border-gray-200 flex flex-col h-1/6">
-                <div className="flex py-2.5 px-6 items-center justify-start h-full">
-                  부가세
+                <div className="w-1/2">
+                  {basicService.detail.map((service, idx) => (
+                    <div
+                      key={idx}
+                      className={`w-full text-right font-semibold py-1 px-4 ${
+                        idx !== basicService.detail.length - 1
+                          ? "border-b border-gray-200"
+                          : ""
+                      }`}
+                    >
+                      {service.isFree
+                        ? "무료"
+                        : `${service.price.toLocaleString()}원`}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="relative border-t border-gray-200 flex flex-col">
+                <div className="flex flex-row p-2">
+                  <div className="flex py-1 px-4 items-center justify-start h-full w-full text-left">
+                    부가세
+                  </div>
+                  <div className=" flex py-1 px-4 w-full items-center justify-center text-right">
+                    {VAT ? `${VAT.toLocaleString()}원` : "0원"}
+                  </div>
                 </div>
               </div>
             </div>
@@ -62,14 +89,13 @@ const BusinessVisaTable = ({ visaDetails }: BusinessVisaTableProps) => {
             </div> */}
 
             {/* 공과금 */}
-            <div className="flex flex-col border border-gray-200 border-b-0 w-6/12">
+            <div className="flex flex-col border border-gray-200 border-b-0 w-1/2">
               <div className="py-1 flex flex-row p-2">
                 <div className="w-1/2 text-left py-1 px-4">{tax.detail}</div>
                 <div className="w-1/2 text-right font-semibold py-1 px-4">
                   {tax.price.toLocaleString()}원
                 </div>
               </div>
-
               {/* 부가 서비스 */}
             </div>
           </div>

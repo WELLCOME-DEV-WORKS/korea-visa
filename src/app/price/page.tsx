@@ -1,16 +1,22 @@
 "use client";
 import React, { useState } from "react";
 import PriceTable from "@/pages/price/PriceTable";
-import DropDown from "@/pages/price/DropDown";
 import BusinessVisaTable from "@/pages/price/BusinessVisaTable";
-
+import DropDown from "@/pages/price/DropDown";
 import { VisaObject } from "@/data/VisaObject";
+import { BusinessVisaObject } from "@/data/BusinessVisaObject";
 
 const Page = () => {
   const [selectedVisa, setSelectedVisa] = useState<string | null>(null);
-  const priceData = VisaObject();
+  const visaData = VisaObject(); //
+  const businessVisaData = BusinessVisaObject(); // businessVisa 데이터 로드
   // 선택된 비자 정보 가져오기
-  const selectedVisaDetails = selectedVisa ? priceData[selectedVisa] : null;
+  const selectedVisaDetails =
+    selectedVisa === "businessVisa"
+      ? businessVisaData["businessVisa"]
+      : selectedVisa
+      ? visaData[selectedVisa] // selectedVisa가 null이 아닌 경우에만 접근
+      : null;
 
   return (
     <div className="container bg-white flex flex-col">

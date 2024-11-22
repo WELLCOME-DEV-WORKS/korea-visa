@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { VisaDetails } from "../../data/PriceObject";
+import { VisaDetails } from "../../data/VisaObject";
 import { Checkbox } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/16/solid";
 import { calcPrice } from "../../utils/CalcPrice";
-
 
 interface PriceTableProps {
   visaDetails: VisaDetails | null;
@@ -11,12 +10,12 @@ interface PriceTableProps {
 
 const PriceTable = ({ visaDetails }: PriceTableProps) => {
   const [selectedAdditional, setSelectedAdditional] = useState<string[]>([]);
+  // visaDetails가 null인 경우 처리
   if (!visaDetails) {
     return <div className="text-center mt-2">비자 종류를 선택해주세요.</div>;
   }
 
   const { tax, basicService, additionalService, VAT } = visaDetails;
-
 
   // 총 비용 계산
   const totalPrice = calcPrice(
@@ -39,7 +38,6 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
   const handleAdditionalChange = (name: string, isChecked: boolean) => {
     setSelectedAdditional((prev) =>
       isChecked ? [...prev, name] : prev.filter((n) => n !== name)
-
     );
   };
 
@@ -55,7 +53,6 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
               공과금
             </div>
           </div>
-
           <div className="flex">
             {/* 기본 서비스 */}
             <div className="border border-gray-300 border-y-0 w-5/12">
@@ -112,18 +109,14 @@ const PriceTable = ({ visaDetails }: PriceTableProps) => {
                       as="div"
                       key={idx}
                       className="flex flex-row w-full items-center group border-b border-gray-200"
-
                       checked={selectedAdditional.includes(service.name)}
                       onChange={(isChecked) =>
                         handleAdditionalChange(service.name, isChecked)
-
                       }
                     >
                       <div
                         className={`w-6 h-6 mx-3 flex items-center justify-center border rounded-md ${
-
                           selectedAdditional.includes(service.name)
-
                             ? "bg-blue-500 border-blue-500"
                             : "bg-gray-200 border-gray-300"
                         }`}

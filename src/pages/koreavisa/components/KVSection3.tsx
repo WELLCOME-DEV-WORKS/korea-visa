@@ -18,7 +18,7 @@ const KVSection3 = () => {
               openLink("https://z17pcyw51c1.typeform.com/to/xFWIie3s")
             }
           >
-            <span>기업 투자 비자</span>
+            <span>투자 비자</span>
             <p>Investor/Enterprise</p>
           </div>
 
@@ -29,7 +29,7 @@ const KVSection3 = () => {
             }
           >
             <span>취업 비자</span>
-            <p>Specially Designated Profession</p>
+            <p>Work Visa</p>
           </div>
 
           <div
@@ -39,11 +39,7 @@ const KVSection3 = () => {
             }
           >
             <span>결혼이민</span>
-            <p>
-              Spouse of Korean
-              <br />
-              National
-            </p>
+            <p>Marriage Visa</p>
           </div>
 
           <div

@@ -1,16 +1,18 @@
+"use client";
+import InputField from "@/ui/FormInput";
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 interface UserFormValues {
-  id: string;
+  // id: string;
   password: string;
-  name: string;
-  address: string;
+  // name: string;
+  // address: string;
   email: string;
-  phoneNumber: string;
-  country: string;
-  birthDay: string;
-  policyAgree: boolean;
+  // phoneNumber: string;
+  // country: string;
+  // birthDay: string;
+  // policyAgree: boolean;
   //   nickName: string;
 }
 
@@ -25,7 +27,29 @@ const UserSignUp = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}></form>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <InputField
+          id="email"
+          label="Email address"
+          type="email"
+          placeholder="john.doe@company.com"
+          register={register}
+          required={true}
+          errorMessage={errors.email?.message} // 에러 메시지 전달
+        />
+        <InputField
+          id="password"
+          label="password"
+          type="password"
+          placeholder="password"
+          register={register}
+          required={true}
+          errorMessage={errors.password?.message} // 에러 메시지 전달
+        />
+        <button type="submit" className="btn">
+          Submit
+        </button>
+      </form>
     </>
   );
 };

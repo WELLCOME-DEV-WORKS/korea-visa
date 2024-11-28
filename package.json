@@ -13,6 +13,8 @@
     "@channel.io/channel-web-sdk-loader": "^2.0.0",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
+    "airtable": "^0.12.2",
+    "flowbite": "^2.5.2",
     "next": "14.2.18",
     "react": "^18",
     "react-dom": "^18",

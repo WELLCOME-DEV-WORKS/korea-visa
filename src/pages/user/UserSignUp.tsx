@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 
-interface UserFormInput {
+interface UserFormValues {
   id: string;
   password: string;
   name: string;
@@ -14,8 +14,20 @@ interface UserFormInput {
   //   nickName: string;
 }
 
-function UserSignUp() {
-  return <div>UserSignUp</div>;
-}
+const UserSignUp = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<UserFormValues>();
+  const onSubmit: SubmitHandler<UserFormValues> = (data) =>
+    console.log("유저 데이터 췤: ", data);
+
+  return (
+    <>
+      <form onSubmit={handleSubmit(onSubmit)}></form>
+    </>
+  );
+};
 
 export default UserSignUp;

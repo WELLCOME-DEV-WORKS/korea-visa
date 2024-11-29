@@ -25,6 +25,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-textshadow")],
+  plugins: [require("tailwindcss-textshadow"), require("flowbite/plugin")],
 };
 export default config;

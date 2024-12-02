@@ -27,7 +27,7 @@ const UserSignUp = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-[65%]">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-2/3">
         <InputField
           id="id"
           label="id"

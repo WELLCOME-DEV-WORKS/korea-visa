@@ -29,16 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className="space-y-12 mx-auto 
-        max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8"
-        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex items-center justify-center mx-auto max-w-4xl">
-          <GoogleTag />
-          <MetaPixel />
-          <ChannelTalk />
-          {children}
-        </div>
+        <GoogleTag />
+        <MetaPixel />
+        <ChannelTalk />
+        {children}
       </body>
     </html>
   );

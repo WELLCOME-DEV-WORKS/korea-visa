@@ -2,6 +2,7 @@
 import React from "react";
 import InputField from "@/ui/FormInput";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useRouter } from "next/navigation";
 
 interface LoginFormValues {
   id: string;
@@ -9,6 +10,7 @@ interface LoginFormValues {
 }
 
 const UserSignIn = () => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -54,11 +56,37 @@ const UserSignIn = () => {
           id="password"
           label="password"
           type="password"
-          placeholder="비밀번호를 입력하세요"
+          placeholder="******"
           register={register}
           required={true}
           errorMessage={errors.password?.message}
         />
+        <div className="flex items-start">
+          <div className="flex items-center h-5">
+            <input
+              id="remember"
+              aria-describedby="remember"
+              name="remember"
+              type="checkbox"
+              className="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600"
+              required
+            />
+          </div>
+          <div className="ms-3 text-sm">
+            <label
+              htmlFor="remember"
+              className="font-medium text-gray-500 dark:text-gray-400"
+            >
+              Remember this device
+            </label>
+          </div>
+          <a
+            href="#"
+            className="ms-auto text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
+          >
+            Lost Password?
+          </a>
+        </div>
 
         <button
           type="submit"
@@ -66,6 +94,15 @@ const UserSignIn = () => {
         >
           로그인
         </button>
+        <div className="text-sm font-medium text-gray-900 dark:text-white mt-4">
+          Not registered yet?{" "}
+          <button
+            onClick={() => router.push("/usersignup")}
+            className="text-blue-600 hover:underline dark:text-blue-500"
+          >
+            Create account
+          </button>
+        </div>
       </form>
     </div>
   );

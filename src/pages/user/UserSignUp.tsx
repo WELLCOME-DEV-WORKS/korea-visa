@@ -2,7 +2,7 @@
 import InputField from "@/ui/FormInput";
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useRouter } from "next/navigation"; // Next.js 14의 라우터 사용
+import { useRouter } from "next/navigation";
 
 interface UserFormValues {
   id: string;

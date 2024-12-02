@@ -2,6 +2,7 @@
 import InputField from "@/ui/FormInput";
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useRouter } from "next/navigation"; // Next.js 14의 라우터 사용
 
 interface UserFormValues {
   id: string;
@@ -17,21 +18,29 @@ interface UserFormValues {
 }
 
 const UserSignUp = () => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<UserFormValues>();
-  const onSubmit: SubmitHandler<UserFormValues> = (data) =>
+
+  const onSubmit: SubmitHandler<UserFormValues> = (data) => {
     console.log("유저 데이터 췤: ", data);
 
+    // 1. 로컬스토리지에 데이터 저장
+    localStorage.setItem("userData", JSON.stringify(data));
+
+    // 2. /usersignin 페이지로 이동
+    router.push("/usersignin");
+  };
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-2/3">
         <InputField
           id="id"
           label="id"
-          type="id"
+          type="text"
           placeholder="id"
           register={register}
           required={true}
@@ -42,7 +51,7 @@ const UserSignUp = () => {
           id="password"
           label="password"
           type="password"
-          placeholder="password"
+          placeholder="******"
           register={register}
           required={true}
           errorMessage={errors.password?.message} // 에러 메시지 전달
@@ -60,7 +69,7 @@ const UserSignUp = () => {
           id="email"
           label="Email address"
           type="email"
-          placeholder="john.doe@company.com"
+          placeholder="wecomevisa@company.com"
           register={register}
           required={true}
           errorMessage={errors.email?.message} // 에러 메시지 전달
@@ -68,7 +77,7 @@ const UserSignUp = () => {
         <InputField
           id="address"
           label="address"
-          type="address"
+          type="text"
           placeholder="address"
           register={register}
           required={true}
@@ -77,8 +86,8 @@ const UserSignUp = () => {
         <InputField
           id="phoneNumber"
           label="phoneNumber"
-          type="phoneNumber"
-          placeholder="phoneNumber"
+          type="tel"
+          placeholder="010-1234-1234"
           register={register}
           required={true}
           errorMessage={errors.address?.message} // 에러 메시지 전달
@@ -86,7 +95,7 @@ const UserSignUp = () => {
         <InputField
           id="country"
           label="country"
-          type="country"
+          type="text"
           placeholder="country"
           register={register}
           required={true}
@@ -95,7 +104,7 @@ const UserSignUp = () => {
         <InputField
           id="birthDay"
           label="birthDay"
-          type="birthDay"
+          type="date"
           placeholder="birthDay"
           register={register}
           required={true}

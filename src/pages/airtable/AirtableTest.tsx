@@ -102,7 +102,7 @@ const AirtableTest = () => {
             {records.map((record) => (
               <div
                 key={record.id}
-                className="flex text-left items-center p-4 border rounded-lg shadow-md"
+                className="flex text-left items-center p-4 border rounded-lg mb-2"
               >
                 <div className="flex w-full justify-between mx-6">
                   <p className=" font-bold">{record.productsName}</p>
@@ -113,8 +113,7 @@ const AirtableTest = () => {
           </div>
 
           {/* 데이터 생성 */}
-          <div className="mt-6 w-1/3 mx-3">
-            <h2 className="text-2xl font-semibold mb-4">Add New Record</h2>
+          <div className="w-1/3 mx-3">
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -150,67 +149,66 @@ const AirtableTest = () => {
               </button>
             </form>
           </div>
-        </div>
-      </div>
-
-      <div className="mb-6 w-1/3">
-        <div className="space-y-2">
-          {records.map((record) => (
-            <div
-              key={record.id}
-              className="flex text-left items-center p-4 border rounded-lg shadow-md"
-            >
-              {editId === record.id ? (
-                // 수정 모드 UI
-                <div className="flex w-full space-x-2">
-                  <input
-                    type="text"
-                    value={editName}
-                    onChange={(e) => setEditName(e.target.value)}
-                    className="p-2 border rounded-lg w-1/2"
-                    placeholder="제품명"
-                  />
-                  <input
-                    type="number"
-                    value={editPrice ?? ""}
-                    onChange={(e) => setEditPrice(Number(e.target.value))}
-                    className="p-2 border rounded-lg w-1/2"
-                    placeholder="제품 가격"
-                  />
-                  <button
-                    onClick={updateRecord}
-                    className="text-white bg-green-500 px-3 py-1 rounded-lg hover:bg-green-600"
-                  >
-                    Save
-                  </button>
-                  <button
-                    onClick={() => setEditId(null)} // 수정 취소
-                    className="text-white bg-gray-500 px-3 py-1 rounded-lg hover:bg-gray-600"
-                  >
-                    Cancel
-                  </button>
+          <div className="mx-3 w-1/3">
+            <div className="space-y-2">
+              {records.map((record) => (
+                <div
+                  key={record.id}
+                  className="flex text-left items-center p-4 border rounded-lg "
+                >
+                  {editId === record.id ? (
+                    // 수정 모드 UI
+                    <div className="flex w-full space-x-2">
+                      <input
+                        type="text"
+                        value={editName}
+                        onChange={(e) => setEditName(e.target.value)}
+                        className="p-2 border rounded-lg w-1/2"
+                        placeholder="제품명"
+                      />
+                      <input
+                        type="number"
+                        value={editPrice ?? ""}
+                        onChange={(e) => setEditPrice(Number(e.target.value))}
+                        className="p-2 border rounded-lg w-1/2"
+                        placeholder="제품 가격"
+                      />
+                      <button
+                        onClick={updateRecord}
+                        className="text-white bg-green-500 px-3 py-1 rounded-lg hover:bg-green-600"
+                      >
+                        Save
+                      </button>
+                      <button
+                        onClick={() => setEditId(null)} // 수정 취소
+                        className="text-white bg-gray-500 px-3 py-1 rounded-lg hover:bg-gray-600"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  ) : (
+                    // 일반 UI
+                    <div className="flex w-full space-x-6 justify-evenly items-center">
+                      <p className="font-bold">{record.productsName}</p>
+                      <p className="text-gray-600">{record.price}원</p>
+                      <button
+                        onClick={() => startEdit(record)}
+                        className="text-white bg-blue-300 px-3 py-1 rounded-lg hover:bg-blue-500"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={() => deleteRecord(record.id)}
+                        className="text-white bg-red-300 px-3 py-1 rounded-lg hover:bg-red-500"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  )}
                 </div>
-              ) : (
-                // 일반 UI
-                <div className="flex w-full space-x-6">
-                  <p className="font-bold">{record.productsName}</p>
-                  <p className="text-gray-600">{record.price}원</p>
-                  <button
-                    onClick={() => startEdit(record)}
-                    className="text-white bg-yellow-500 px-3 py-1 rounded-lg hover:bg-yellow-600"
-                  >
-                    Edit
-                  </button>
-                  <button
-                    onClick={() => deleteRecord(record.id)}
-                    className="text-white bg-red-500 px-3 py-1 rounded-lg hover:bg-red-600"
-                  >
-                    Delete
-                  </button>
-                </div>
-              )}
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </>

@@ -41,26 +41,27 @@ export async function GET() {
   }
 }
 
-// 업데이트
+// 생성
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const newRecord = await base(airtableTableName).create([
       {
         fields: {
-          productsName: body.productsName,
-          price: body.price,
+          productsName: body.productsName, // 제품명
+          price: body.price, // 제품 가격
         },
       },
     ]);
 
     return NextResponse.json(newRecord);
   } catch (error) {
-    console.error("생성 오류", error);
+    console.error("데이터 생성 오류", error);
     return NextResponse.error();
   }
 }
 
+// 업데이트
 export async function PUT(req: NextRequest) {
   try {
     const body = await req.json();
@@ -68,7 +69,7 @@ export async function PUT(req: NextRequest) {
     // Airtable의 레코드 업데이트
     const updatedRecord = await base(airtableTableName).update([
       {
-        id: body.id, // 수정할 레코드의 ID
+        id: body.id, // 수정할 레코드 ID
         fields: {
           productsName: body.productsName,
           price: body.price,

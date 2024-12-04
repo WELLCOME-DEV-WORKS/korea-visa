@@ -9,7 +9,7 @@ import { NextRequest, NextResponse } from "next/server";
 // products DB
 const airtableApiKey = process.env.PRODUCTS_DB_KEY;
 const airtableBaseId = process.env.PRODUCTS_DB_ID;
-const airtableTableName = process.env.AIRTABLE_TABLE_NAME as string;
+const airtableTableName = process.env.AIRTABLE_TABLE_NAME_PRODUCTS as string;
 
 Airtable.configure({ apiKey: airtableApiKey });
 

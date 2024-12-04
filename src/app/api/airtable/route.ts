@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
     const newRecord = await base(airtableTableName).create([
       {
         fields: {
-          productsName: body.productsName, // 제품명
+          productsName: body.productsName,
           price: body.price, // 제품 가격
         },
       },

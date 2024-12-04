@@ -7,6 +7,14 @@ interface Record {
   price: number;
 }
 
+interface AirtableResponse {
+  id: string;
+  fields: {
+    productsName: string;
+    price: number;
+  };
+}
+
 const AirtableTest = () => {
   const [records, setRecords] = useState<Record[]>([]);
   const [name, setName] = useState<string>("");
@@ -18,10 +26,10 @@ const AirtableTest = () => {
   // 데이터를 가져오는 함수
   const fetchRecords = async () => {
     const res = await fetch("/api/airtable");
-    const data = await res.json();
+    const data: AirtableResponse[] = await res.json(); // AirtableResponse 타입 사용
 
     // Airtable의 데이터를 fields 속성으로 매핑
-    const mappedData = data.map((record: any) => ({
+    const mappedData = data.map((record) => ({
       id: record.id,
       productsName: record.fields.productsName, // fields에서 가져오기
       price: record.fields.price, // fields에서 가져오기

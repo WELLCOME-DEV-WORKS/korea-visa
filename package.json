@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-deploy": "next build && next export"
+    // "vercel-deploy": "next build && next export"
   },
   "dependencies": {
     "@channel.io/channel-web-sdk-loader": "^2.0.0",
